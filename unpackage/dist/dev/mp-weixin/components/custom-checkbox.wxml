@@ -1,0 +1,1 @@
+<view><block wx:if="{{isselected}}"><view data-event-opts="{{[['tap',[['onchange',['$event']]]]]}}" class="select-active" bindtap="__e"><image class="img" src="/static/duigou.png" mode="aspectFill"></image></view></block><block wx:else><view data-event-opts="{{[['tap',[['onchange',['$event']]]]]}}" class="select" bindtap="__e"></view></block></view>

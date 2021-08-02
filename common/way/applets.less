@@ -1,0 +1,93 @@
+// 设置订单-小程序界面的样式
+//设备像素
+
+// 设置商品块样式
+.goods{
+    width: (414/16rem);
+    height: (256/16rem);
+    font-size: (14/16rem);
+    border-bottom: (6/16rem) solid #ebecec;
+    box-sizing: border-box;
+    .g-top{
+        height: (56/16rem);
+        display: flex;
+        justify-content: space-between;
+        color: @font-color02;
+        .top-left{
+            display: flex;
+            justify-content: space-between;
+            line-height: (32/16rem);
+            .icon-shizhong{
+                font-size: 24px;
+                margin-right: 5px;
+            }
+            .order-img{
+                width: (50/16rem);
+                height: (10/16rem);
+            }
+			.order-img img{
+				width: 172%;
+				height: 341%;
+			}
+        }
+        .top-right{
+            color:@font-color01;
+            line-height: (32/16rem);
+        }
+        
+    }
+
+    .g-img{
+        img{
+            width:(100/16rem);
+            height:(100/16rem);
+        }
+    }
+    .g-bottom{
+        height: (8/16rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .bottom-left{
+            display: flex;
+            justify-content: space-between;
+            color: @font-color02;
+            line-height: (28/16rem);
+			margin-left: 13px;
+            .sum{
+                margin-left:(15/16rem);
+                text{
+                    color:@font-color01;
+                }
+            }
+        }
+        .bottom-right{
+			display: flex;
+			justify-content: center;
+            .btn{
+                width: (80/16rem);
+                height: (25/16rem);
+                border-radius: (40/16rem);
+				float: left;
+            }
+            .del{
+				line-height: 20px;
+				width: 78px;
+                border: (1/16rem) solid @font-color03;
+                color: @font-color03;
+                margin-right:(12/16rem);
+				font-size: 10px;
+            }
+            .res{
+                border: (1/16rem) solid @font-color01;
+                color: @font-color01;
+				margin-right:(12/16rem);
+				line-height: 20px;
+				width: 78px;
+				font-size: 10px;
+            }
+        }
+    }
+}
+
+ 

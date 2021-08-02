@@ -1,0 +1,309 @@
+page {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+page {
+    font-size: 12.36714976px;
+}
+}
+@media screen and (min-width: 375px) {
+page {
+    font-size: 14.49275362px;
+}
+}
+@media screen and (min-width: 414px) {
+page {
+    font-size: 16px;
+}
+}
+page {
+  min-width: 20rem;
+  width: 25.875rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.outer {
+  width: 25.875rem;
+  height: 468.75rem;
+  position: relative;
+}
+.header {
+  width: 25.875rem;
+  height: 2.875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+}
+.leftarr {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin-top: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+.leftarr ._img {
+  display: block;
+  width: 100%;
+}
+.leftarr ._a {
+  text-decoration: none;
+}
+.rightbtn {
+  width: 7.75rem;
+  height: 2.375rem;
+  margin-top: 0.3125rem;
+  margin-right: 0.9375rem;
+}
+.rightbtn ._img {
+  display: block;
+  width: 100%;
+}
+.searchtext {
+  width: 4rem;
+  height: 1.3125rem;
+  margin-left: 5.625rem;
+  margin-top: 0.8125rem;
+}
+.searchtext ._span {
+  font-size: 1rem;
+}
+.pro {
+  width: 25.875rem;
+  height: 32.8125rem;
+  border: 0.09375rem solid #F3F3F3;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.pro .water {
+  width: 25.875rem;
+  height: 1.3125rem;
+}
+.pro .water ._p {
+  font-size: 0.875rem;
+  color: #666;
+}
+.pro .proimg {
+  width: 25.875rem;
+  height: 24.3125rem;
+}
+.pro .proimg ._img {
+  display: block;
+  width: 100%;
+}
+.pro .mark {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  background-color: #FF3861;
+  border: 0.0625rem solid #FF3861;
+  border-radius: 0.4375rem;
+  margin: 0 auto;
+  margin-top: 0.3125rem;
+}
+.pro .titles {
+  margin-top: 1.25rem;
+}
+.pro .titles ._p {
+  font-size: 1.3125rem;
+  font-weight: bold;
+}
+.pro .price {
+  width: 25.875rem;
+  height: 2.3125rem;
+  margin-top: 0.3125rem;
+}
+.pro .price ._p {
+  font-size: 0.9375rem;
+  color: #FF3861;
+  font-weight: bold;
+}
+.pro .price .sp1 {
+  font-size: 1.5625rem;
+  color: #FF3861;
+  font-weight: bold;
+}
+.pro .price .sp2 {
+  font-size: 0.9375rem;
+  color: #BBB;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+.detail {
+  width: 25.875rem;
+  height: 4.375rem;
+  border: 0.3125rem solid #F3F3F3;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.detail .active {
+  width: 23.0625rem;
+  height: 1.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 1.25rem;
+  margin-right: 1.5625rem;
+  margin-top: 0.9375rem;
+}
+.detail .active .act1 {
+  font-size: 0.875rem;
+  color: #999;
+  margin-right: 3.125rem;
+}
+.detail .active .act2 {
+  font-size: 0.875rem;
+  color: #333;
+}
+.service {
+  width: 25.875rem;
+  height: 1.375rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 1.25rem;
+  margin-right: 1.5625rem;
+  margin-top: 0.9375rem;
+}
+.service .pser {
+  font-size: 0.875rem;
+  color: #999;
+  margin-right: 0.625rem;
+}
+.service .ptext {
+  font-size: 0.875rem;
+  color: #333;
+}
+.service .mark1 {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.service .mark1 ._img {
+  display: block;
+  width: 100%;
+}
+.liji {
+  width: 3.375rem;
+  height: 1.125rem;
+  border: 0.0625rem solid #FFE8ED;
+  border-radius: 0.5rem;
+  background-color: #FFE8ED;
+  margin-right: 0.625rem;
+}
+.liji ._p {
+  font-size: 0.3125rem;
+  color: #FF3861;
+  line-height: 1.125rem;
+  text-align: center;
+}
+.score ._p {
+  font-size: 1.125rem;
+  color: #333;
+  margin-right: 3.125rem;
+  font-weight: bold;
+  margin-top: 0.375rem;
+  margin-left: 1.25rem;
+}
+.good-detail {
+  width: 25.875rem;
+  height: 127.5625rem;
+}
+.good-detail image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.addshop {
+  width: 25.875rem;
+  height: 3.375rem;
+  background-color: white;
+  position: absolute;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-shadow: 0 -0.125rem 0.1875rem -0.0625rem rgba(0, 0, 0, 0.3);
+}
+.addshop .shu {
+  height: 2.5rem;
+  width: 0.0625rem;
+  background-color: #ECECEC;
+  margin-top: 0.3125rem;
+}
+.shopcar {
+  width: 3.75rem;
+  height: 3.375rem;
+}
+.shopcar .shopcarimg {
+  width: 1.875rem;
+  height: 1.5625rem;
+  margin-left: 0.9375rem;
+  margin-top: 0.3125rem;
+}
+.shopcar .shopcarimg ._img {
+  display: block;
+  width: 100%;
+}
+.shopcar .shopcartext ._p {
+  text-align: center;
+  margin-top: 0.1875rem;
+  font-size: 0.75rem;
+  color: #333;
+}
+.show {
+  width: 3.75rem;
+  height: 3.375rem;
+}
+.show .showimg {
+  width: 2.375rem;
+  height: 1.75rem;
+  margin-left: 0.75rem;
+  margin-bottom: 0.3125rem;
+}
+.show .showimg ._img {
+  display: block;
+  width: 100%;
+}
+.show .showtext ._p {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #333;
+}
+.er {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  background-color: #FFC9D4;
+  border-radius: 0.9375rem;
+  position: absolute;
+  bottom: 2.1875rem;
+  left: 2.5rem;
+  position: fixed;
+  z-index: 9999;
+}
+.er .num {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  font-size: 0.75rem;
+  color: #FF5175;
+  padding-left: 0.25rem;
+  margin: 0 auto;
+}
+.add {
+  height: 3.375rem;
+  width: 18.3125rem;
+  background-color: #FF3861;
+  border-top-left-radius: 1.875rem;
+}
+.add ._p {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3.75rem;
+}
+

@@ -1,0 +1,56 @@
+// 设置顶部标题和菜单切换的样式
+@total-width:414;
+	
+.w{
+	width: (414/16rem);
+	margin: 0 auto;
+}
+//设置根元素
+
+view{
+    display: block;
+}
+a{
+    text-decoration: none;    
+}
+@font-color01:#ff3861;
+@font-color02:#2d2d2d;
+@font-color03:#999999;
+
+// 设置顶部标题栏
+.top-bar:extend(.w){
+    height: (45/16rem);
+    box-shadow: 0 (4/16rem) (8/16rem) #ebe0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // 设置顶部标题
+    .top-title{
+        font-size: (18/16rem);
+        color: @font-color02;
+        align-self: center;
+      }
+  }
+//  设置切换菜单栏的样式
+.nav-wrapper:extend(.w){
+    height: (56/16rem);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // border-bottom: (1/16rem) solid #ebecec;
+    view,a{
+        display: block;
+        // width: (101/16rem);
+        // height: (56/16rem);
+        color: @font-color02;
+        text-align: center;
+        line-height: (56/16rem);
+        }
+    view:hover,
+    a:hover{
+        // border-bottom: (1/16rem) solid @font-color01;
+        color: @font-color01;
+    }
+
+}

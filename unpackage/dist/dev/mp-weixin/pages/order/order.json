@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-segmented-control": "/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control",
+    "zzx-tabs": "/components/zzx-tabs/zzx-tabs",
+    "footer": "/components/song-footer/song-footer"
+  }
+}

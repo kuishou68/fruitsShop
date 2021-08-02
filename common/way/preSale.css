@@ -1,0 +1,25 @@
+.goods .price1 {
+  text-decoration: line-through;
+}
+.goods .g-center .g-img-right .title2 {
+  margin: -0.25rem auto 0.125rem 0rem;
+  color: #999999;
+}
+.goods .g-center .g-img-right .num02 {
+  justify-content: flex-start;
+  margin-left: -0.375rem;
+}
+.goods .g-presale-bottom {
+  height: 0.5rem;
+  float: right;
+}
+.goods .g-presale-bottom .bottom-right .del-y {
+  border: 0.0625rem solid #aaaaaa;
+  color: #aaaaaa;
+  margin-right: 0.75rem;
+  margin-top: 3px;
+  background-color: #ffffff;
+  line-height: 20px;
+  width: 78px;
+  font-size: 10px;
+}

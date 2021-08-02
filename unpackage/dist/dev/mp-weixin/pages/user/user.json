@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "footer": "/components/song-footer/song-footer"
+  }
+}

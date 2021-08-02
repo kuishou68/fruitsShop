@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/seckill",
+    "pages/sort/sort",
+    "pages/sort/prodetails",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/shopCart/shopCart",
+    "pages/user/user"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "水果熟了",
+    "navigationBarBackgroundColor": "#ff3861",
+    "backgroundColor": "#ff3861"
+  },
+  "usingComponents": {
+    "footer": "/components/song-footer/song-footer"
+  },
+  "sitemapLocation": "sitemap.json"
+}

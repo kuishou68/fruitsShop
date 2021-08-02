@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "check-box": "/components/custom-checkbox",
+    "footer": "/components/song-footer/song-footer"
+  }
+}

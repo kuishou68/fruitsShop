@@ -1,0 +1,63 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx5635f2f0e6d49c80",
+  "projectname": "shuiguoshule",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "name": "index",
+          "query": " ",
+          "id": 0,
+          "pathName": "pages/index/index"
+        },
+        {
+          "name": "sort",
+          "query": " ",
+          "id": 1,
+          "pathName": "pages/sort/sort"
+        },
+        {
+          "name": "order",
+          "query": " ",
+          "id": 2,
+          "pathName": "pages/order/order"
+        },
+        {
+          "name": "shopCart",
+          "query": " ",
+          "id": 3,
+          "pathName": "pages/shopCart/shopCart"
+        },
+        {
+          "name": "user",
+          "query": " ",
+          "id": 4,
+          "pathName": "pages/user/user"
+        }
+      ]
+    }
+  }
+}

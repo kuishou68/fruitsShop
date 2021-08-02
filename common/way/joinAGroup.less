@@ -1,0 +1,106 @@
+// 设置订单-拼团界面样式
+view{
+    display: inline-block;
+}
+.goods{
+    width: (414/16rem);
+    height: (220/16rem);
+    border-bottom: (12/16rem) solid #f5f5f5;
+    font-size: (14/16rem);
+    box-sizing: border-box;
+    .g-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333333;
+        margin-top: (10/16rem);
+		margin-left: (10/16rem);
+		margin-right: (10/16rem);
+        .top-right{
+            color:#ff3861;
+        }
+    }
+    .g-center{
+        width: (414/16rem);
+        height: (113/16rem);
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        padding: (17/16rem);
+            
+        img{
+            width: (100/16rem);
+            height: (100/16rem);
+         }
+        .g-img-right{
+            width: (266/16rem);
+            height: (60/16rem);
+            margin-left: (10/16rem);
+            text{
+                display: block;
+                height: (30/16rem);
+            }
+            .num01{
+                height: (15/16rem);
+                display: flex;
+                justify-content: space-between;
+                color: #b6b6b6;
+            }
+            .num02{
+                height: (15/16rem);
+                display: flex;
+                justify-content: flex-end;
+                color: #b6b6b6;
+                .price1{
+                    text-decoration:line-through;
+                }
+                .price2{
+                    color: #ff3861;
+                    margin-left: (5/16rem);
+                }
+            }
+        }
+    }
+
+    .g-bottom{
+        height: (8/16rem);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		.bottom-left{
+		    display: flex;
+		    justify-content: space-between;
+		    color: @font-color02;
+			text{
+				font-size: 14px;
+				white-space: pre;
+			}
+			.sum{
+			    white-space: pre;
+			}
+		}
+        .bottom-right{
+			display: flex;
+			justify-content: center;
+            .del-p{
+                border: (1/16rem) solid #aaaaaa;
+                color: #aaaaaa;
+                margin-right:(12/16rem);
+				margin-top: 3px;
+                background-color: #ffffff;
+				line-height: 20px;
+				width: 78px;
+				font-size: 10px;
+				
+            }
+            .group{
+                border: (1/16rem) solid #ff3861;
+                background-image: linear-gradient(to right, #f96562 , #ff3861);
+                color: white;
+            }
+        }
+    }
+
+}

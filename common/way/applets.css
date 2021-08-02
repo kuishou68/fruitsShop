@@ -1,0 +1,72 @@
+.goods {
+  width: 10.35rem;
+  height: 6.4rem;
+  font-size: 0.35rem;
+  border-bottom: 0.15rem solid #ebecec;
+  margin: auto;
+  padding: 0.425rem;
+  box-sizing: border-box;
+}
+.goods .g-top {
+  height: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  color: #2d2d2d;
+}
+.goods .g-top .top-left {
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.8rem;
+}
+.goods .g-top .top-left .icon-shizhong {
+  font-size: 24px;
+  margin-right: 5px;
+}
+.goods .g-top .top-left .order-img {
+  width: 1.25rem;
+  height: 0.25rem;
+}
+.goods .g-top .top-right {
+  color: #ff3861;
+  line-height: 0.8rem;
+}
+.goods .g-img {
+  height: 3rem;
+}
+.goods .g-img img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.goods .g-bottom {
+  height: 1.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.goods .g-bottom .bottom-left {
+  display: flex;
+  justify-content: space-between;
+  color: #5b5b5b;
+  line-height: 0.7rem;
+}
+.goods .g-bottom .bottom-left .sum {
+  margin-left: 0.375rem;
+}
+.goods .g-bottom .bottom-left .sum text {
+  color: #ff3861;
+}
+.goods .g-bottom .bottom-right .btn {
+  width: 2rem;
+  height: 0.625rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.goods .g-bottom .bottom-right .del {
+  border: 0.025rem solid #999999;
+  color: #999999;
+  margin-right: 0.3rem;
+}
+.goods .g-bottom .bottom-right .res {
+  border: 0.025rem solid #ff3861;
+  color: #ff3861;
+}

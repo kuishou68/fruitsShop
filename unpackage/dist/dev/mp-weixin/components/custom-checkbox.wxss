@@ -1,0 +1,23 @@
+
+.select{
+	width: 40rpx;
+	height: 40rpx;
+	border: 1rpx solid #CCC;
+	background-color: #FFFFFF;
+	margin-right: 20rpx;
+	border-radius: 4rpx;
+}
+.select-active{
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+	border-radius: 4rpx;
+	border: 1rpx solid transparent;
+}
+.select-active .img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 4rpx;
+}
+

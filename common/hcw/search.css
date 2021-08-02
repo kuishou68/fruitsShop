@@ -1,0 +1,263 @@
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 12.36714976px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 14.49275362px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 16px;
+  }
+}
+body {
+  min-width: 20rem;
+  width: 25.875rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.outer {
+  width: 25.875rem;
+  position: relative;
+}
+.header {
+  width: 25.875rem;
+  height: 2.875rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+}
+.leftarr {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  margin-top: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+.leftarr img {
+  display: block;
+  width: 100%;
+}
+.leftarr a {
+  text-decoration: none;
+}
+.rightbtn {
+  width: 7.75rem;
+  height: 2.375rem;
+  margin-top: 0.3125rem;
+  margin-right: 0.9375rem;
+}
+.rightbtn img {
+  display: block;
+  width: 100%;
+}
+.searchtext {
+  width: 4rem;
+  height: 1.3125rem;
+  margin-left: 5.625rem;
+  margin-top: 0.8125rem;
+}
+.searchtext span {
+  font-size: 1rem;
+}
+.search {
+  width: 25.875rem;
+  height: 3.125rem;
+}
+/*搜索*/
+.index-search {
+  display: flex;
+  background: #F5F5F5;
+  width: 600rpx;
+  border-radius: 50rpx;
+  align-items: center;
+  margin: 10px;
+}
+.index-search text {
+  font-size: 25rpx;
+  color: #999999;
+  margin-left: 50rpx;
+  margin-right: 15rpx;
+}
+.index-search input {
+  width: 600rpx;
+  height: 70rpx;
+  font-size: 23rpx;
+  flex: 1;
+}
+.index-search-right {
+  float: right;
+  margin-top: -35px;
+  margin-right: 44rpx;
+}
+.index-search-right navigator {
+  font-size: 30rpx;
+}
+.food {
+  width: 25.875rem;
+  height: 8.9375rem;
+  border: 0.0625rem solid #F3F3F3;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+}
+.foodimg {
+  width: 6.75rem;
+  height: 8.9375rem;
+}
+.foodimg img {
+  display: block;
+  width: 100%;
+  margin-top: 1.25rem;
+  float: left;
+}
+.rtext {
+  width: 18.125rem;
+  height: 8.9375rem;
+}
+.toptext {
+  width: 18.125rem;
+  height: 3.5rem;
+  margin-top: 1.25rem;
+}
+.toptext p {
+  font-size: 1rem;
+}
+.toptext .toptextp1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.toptext .toptextp1 span {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  color: #999;
+}
+.shenyu {
+  width: 4.25rem;
+  height: 1rem;
+  border: 0.0625rem solid #FF3760;
+  background-color: white;
+  border-radius: 0.375rem;
+  margin-top: 0.375rem;
+}
+.shenyu p {
+  font-size: 0.75rem;
+  color: #FF3760;
+  line-height: 1rem;
+  text-align: center;
+}
+.bot {
+  width: 18.125rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.botletext {
+  width: 5.5625rem;
+  height: 3rem;
+  display: flex;
+  margin-top: 0.3125rem;
+}
+.botletext .p1 {
+  font-size: 0.75rem;
+  color: #FF3760;
+  padding-top: 1.5rem;
+}
+.botletext .p2 {
+  font-size: 1.0625rem;
+  color: #FF3760;
+  padding-top: 1.25rem;
+}
+.botletext .p3 {
+  font-size: 0.5rem;
+  color: #BBBBBB;
+  padding-top: 1.5rem;
+  text-decoration: line-through;
+}
+.botletext .p4 {
+  font-size: 0.8125rem;
+  color: #BBBBBB;
+  padding-top: 1.4375rem;
+  text-decoration: line-through;
+}
+.botrigbtn1 a {
+  text-decoration: none;
+}
+.botrigbtn {
+  width: 1.875rem;
+  height: 1.875rem;
+  float: right;
+  margin-top: 1.25rem;
+}
+.botrigbtn img {
+  display: block;
+  width: 100%;
+}
+.botrigbtn a {
+  text-decoration: none;
+}
+.liji {
+  width: 5.5rem;
+  height: 1.875rem;
+  border: 0.0625rem solid #FF3760;
+  border-radius: 1rem;
+  background-color: #FF3760;
+  margin-top: 0.9375rem;
+}
+.liji p {
+  font-size: 0.875rem;
+  color: white;
+  line-height: 1.875rem;
+  text-align: center;
+}
+.shopcart {
+  height: 3.125rem;
+  width: 3.125rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.0625rem solid white;
+  border-radius: 2.5rem;
+  position: absolute;
+  bottom: 3.125rem;
+  left: 1.875rem;
+  position: fixed;
+}
+.shopcart .shop {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 auto;
+}
+.shopcart .shop img {
+  display: block;
+  width: 100%;
+  margin-top: 0.5625rem;
+}
+.er {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #FF3760;
+  border-radius: 1.5rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 4.0625rem;
+  position: fixed;
+  z-index: 9999;
+}
+.er .num {
+  height: 1rem;
+  width: 1rem;
+  font-size: 1rem;
+  color: white;
+  padding-left: 0.3125rem;
+  margin: 0 auto;
+}

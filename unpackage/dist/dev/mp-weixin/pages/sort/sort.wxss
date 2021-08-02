@@ -1,0 +1,77 @@
+.shopcart {
+  height: 3.125rem;
+  width: 3.125rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.0625rem solid white;
+  border-radius: 2.5rem;
+  position: absolute;
+  bottom: 3.125rem;
+  left: 1.875rem;
+  position: fixed;
+  margin-bottom: 17px;
+}
+.shopcart .shop {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 auto;
+}
+.shopcart .shop ._img {
+  display: block;
+  width: 100%;
+  margin-top: 0.5625rem;
+}
+/*头部定位、搜索、消息*/
+.index-head {
+  height: 80rpx;
+  width: 100%;
+}
+/*定位*/
+.index-head-left {
+  width: 180px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.index-dingwei {
+  font-size: 35rpx;
+  margin: 10rpx;
+  color: #000;
+}
+.index-place {
+  font-size: 30rpx;
+  color: #ff3861;
+  font-weight: bold;
+}
+/*搜索*/
+.index-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background: #eaebec;
+  height: 70rpx;
+  float: right;
+  margin-top: 3px;
+  margin-right: 36rpx;
+  width: 258rpx;
+  border-radius: 50rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.index-search text {
+  font-size: 25rpx;
+  color: #999;
+  margin-left: 50rpx;
+  margin-right: 15rpx;
+}
+.index-search input {
+  font-size: 23rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+

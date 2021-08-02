@@ -1,0 +1,308 @@
+@import "common";
+
+body {
+    min-width: 320/16rem;
+    width: 414/16rem;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.outer {
+    width: 414/16rem;
+    position: relative;
+}
+
+// 头部
+.header {
+    width: 414/16rem;
+    height: 46/16rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10/16rem rgba(0, 0, 0, .3);
+}
+
+// 左箭头
+.leftarr {
+    width: 16/16rem;
+    height: 16/16rem;
+    line-height: 16/16rem;
+    margin-top: 15/16rem;
+    margin-left: 15/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.rightbtn {
+    width: 124/16rem;
+    height: 38/16rem;
+    margin-top: 5/16rem;
+    margin-right: 15/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.searchtext {
+    width: 64/16rem;
+    height: 21/16rem;
+    margin-left: 90/16rem;
+    margin-top: 13/16rem;
+
+    span {
+        font-size: 16/16rem;
+    }
+}
+
+//  搜索框 
+.search {
+    width: 414/16rem;
+    height: 50/16rem;
+
+}
+/*搜索*/
+	.index-search {
+		display: flex;
+		background: #F5F5F5;
+		width: 600rpx;
+		border-radius: 50rpx;
+		align-items: center;
+		margin: 10px;
+	}
+
+	.index-search text {
+		font-size: 25rpx;
+		color: #999999;
+		margin-left: 50rpx;
+		margin-right: 15rpx;
+	}
+
+	.index-search input {
+		width: 600rpx;
+		height: 70rpx;
+		font-size: 23rpx;
+		flex: 1;
+	}
+	 .index-search-right{
+		 float: right;
+		 margin-top: -35px;
+		 margin-right: 44rpx;
+	 }
+	.index-search-right navigator{
+		font-size: 30rpx;
+	}
+
+
+// 商品详情页
+.food {
+    width: 414/16rem;
+    height: 143/16rem;
+    border: 1/16rem solid #F3F3F3;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+}
+
+// 左边图片
+.foodimg {
+    width: 108/16rem;
+    height: 143/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+        margin-top: 20/16rem;
+        float: left;
+    }
+
+}
+
+// 右边文字
+.rtext {
+    width: 290/16rem;
+    height: 143/16rem;
+
+}
+
+.toptext {
+    width: 290/16rem;
+    height: 56/16rem;
+    margin-top: 20/16rem;
+
+    p {
+        font-size: 16/16rem;
+    }
+
+    .toptextp1 {
+        font-size: 16/16rem;
+        font-weight: bold;
+
+        span {
+            font-size: 15/16rem;
+            font-weight: bold;
+            color: #999;
+        }
+    }
+
+
+
+}
+
+.shenyu {
+    width: 68/16rem;
+    height: 16/16rem;
+    border: 1/16rem solid #FF3760;
+    background-color: white;
+    border-radius: 6/16rem;
+    margin-top: 6/16rem;
+
+
+}
+
+.shenyu p {
+    font-size: 12/16rem;
+    color: #FF3760;
+    line-height: 16/16rem;
+    text-align: center;
+}
+
+.bot {
+    width: 290/16rem;
+    height: 56/16rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.botletext {
+    width: 89/16rem;
+    height: 48/16rem;
+    display: flex;
+    margin-top: 5/16rem;
+
+    .p1 {
+        font-size: 12/16rem;
+        color: #FF3760;
+        padding-top: 24/16rem;
+    }
+
+    .p2 {
+        font-size: 17/16rem;
+        color: #FF3760;
+        padding-top: 20/16rem;
+    }
+
+    .p3 {
+        font-size: 8/16rem;
+        color: #BBBBBB;
+        padding-top: 24/16rem;
+        text-decoration: line-through;
+    }
+
+    .p4 {
+        font-size: 13/16rem;
+        color: #BBBBBB;
+        padding-top: 23/16rem;
+        text-decoration: line-through;
+    }
+}
+
+.botrigbtn1 a {
+    text-decoration: none;
+}
+
+.botrigbtn {
+    width: 30/16rem;
+    height: 30/16rem;
+    float: right;
+    margin-top: 20/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.liji {
+    width: 88/16rem;
+    height: 30/16rem;
+    border: 1/16rem solid #FF3760;
+    border-radius: 16/16rem;
+    background-color: #FF3760;
+    margin-top: 15/16rem;
+
+    p {
+        font-size: 14/16rem;
+        color: white;
+        line-height: 30/16rem;
+        text-align: center;
+    }
+
+}
+
+
+.shopcart {
+    height: 50/16rem;
+    width: 50/16rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1/16rem solid white;
+    border-radius: 40/16rem;
+    position: absolute;
+    bottom: 50/16rem;
+    left: 30/16rem;
+    position: fixed;
+
+    .shop {
+        height: 32/16rem;
+        width: 32/16rem;
+        margin: 0 auto;
+
+        img {
+            display: block;
+            width: 100%;
+            margin-top: 9/16rem;
+        }
+    }
+}
+
+
+.er {
+    height: 24/16rem;
+    width: 24/16rem;
+    background-color: #FF3760;
+    border-radius: 24/16rem;
+    position: absolute;
+    bottom: 80/16rem;
+    left: 65/16rem;
+    position: fixed;
+    z-index: 9999;
+
+    .num {
+        height: 16/16rem;
+        width: 16/16rem;
+        font-size: 16/16rem;
+        color: white;
+        padding-left: 5/16rem;
+        margin: 0 auto;
+    }
+}

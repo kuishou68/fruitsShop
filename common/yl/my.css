@@ -1,0 +1,315 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.head {
+    float: left;
+    width: 100%;
+    height: 2.475rem;
+    text-align: center;
+    line-height: 2.475rem;
+    background-color: white;
+    box-shadow: 0px 1px 5px #aaaaaa;
+}
+
+.tuichu {
+    position: absolute;
+    z-index: 10000;
+    top: 0.125rem;
+    left: 15.45rem;
+    float: left;
+}
+
+.content {
+    width: 100%;
+    height: 55rem;
+    background-color: #F3F5F9;
+}
+
+
+/*nav*/
+
+.nav {
+    width: 100%;
+    height: 12rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+}
+
+.nav .nav-top {
+    height: 5rem;
+    padding: 1rem 1.5rem 0rem 1rem;
+    margin-bottom: 1.8rem;
+	
+}
+
+.nav .nav-top .user-logo{
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+}
+
+.nav .name {
+    font-size: 1.6rem;
+    margin-left: 1rem;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+
+.nav .nav-r {
+    float: right;
+    width: 5.6rem;
+    height: 2.25rem;
+    border-radius: 1rem;
+    line-height: 2.25rem;
+    text-align: center;
+    color: #e49912;
+    background: -webkit-linear-gradient(left, #535353, #2d2b2e, #3f3d3f);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #535353, #2d2b2e, #3f3d3f);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #535353, #2d2b2e, #3f3d3f);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #535353, #2d2b2e, #3f3d3f);
+    /* 标准的语法 */
+    margin-top: 1.2rem;
+}
+
+.nav .nav-r .namema {
+    color: #ceaa66;
+}
+
+
+/* local-nav */
+
+.local-nav {
+    display: flex;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 因为是单行 */
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.local-nav li {
+    margin-top: 0.5rem;
+}
+
+.local-nav li .local-c {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.local-nav li .h {
+    color: #aaaaaa;
+}
+
+
+/*.local-bnav*/
+
+.local-bnav,
+.subnav-entry {
+    width: 23.75rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    display: flex;
+    margin: 0.8rem auto;
+}
+
+.local-bnav {
+    height: 6.5rem;
+}
+
+.local-bnav li {
+    flex: 1;
+}
+
+.local-bnav .iconfont {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.local-bnav li:nth-child(1) .iconfont {
+    background-color: #fff8ee;
+}
+
+.local-bnav li:nth-child(2) .iconfont {
+    background-color: #f2feee;
+}
+
+.local-bnav li:nth-child(3) .iconfont {
+    background-color: #eff8ff;
+}
+
+.local-bnav a {
+    display: flex;
+    flex-direction: column;
+    /* 侧轴居中对齐 因为是单行 */
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.local-bnav li {
+    margin-top: 1rem;
+}
+
+
+/* subnav-entry */
+
+.subnav-entry {
+    height: 10.69rem;
+    flex-wrap: wrap;
+}
+
+.subnav-entry li {
+    /* 里面的子盒子可以写 % 相对于父级来说的 */
+    flex: 33%;
+}
+
+.subnav-entry a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subnav-entry .iconfont {
+    font-size: 1.8rem;
+    margin-top: 1.44rem;
+}
+
+.subnav-entry .S {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
+
+/* nav-common */
+
+.nav-ren {
+    width: 23.75rem;
+    height: 10.69rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    margin: 0px auto;
+}
+
+.nav-common {
+    height: 3.56rem;
+    display: flex;
+    padding: 0 1rem 0 2rem;
+}
+
+.nav-common:nth-child(2) {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-common-right {
+    margin-left: 5.4rem;
+}
+
+.nav-common-left a,
+.nav-common-right a {
+    line-height: 3.56rem;
+    font-size: 1rem;
+}
+
+.nav-common-left .ren {
+    font-size: 1.2rem;
+}
+
+.nav-common .jifen {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    padding-left: 0.5rem;
+}
+
+.nav-common .qian {
+    padding: 0 0.5rem;
+}
+
+.nav-common .chong {
+    color: #ffc1cd;
+    font-size: 0.75rem;
+}
+
+.nav-common .pike {
+    display: block;
+    width: 4.68rem;
+    height: 1.5rem;
+    background-color: #Fe4362;
+    border-radius: 1rem;
+    color: #fff;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* -n+2就是选择前面两个元素 */
+
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+.food {
+    width: 23.75rem;
+    margin: 0.7rem auto;
+}
+
+.img-t {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+/*底部栏*/
+
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.75rem;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+}
+
+.container ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.container ul li {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.container ul li text:nth-of-type(1) {
+    font-size: 1.8rem;
+    color: #999;
+}
+
+.container ul li:hover text:nth-of-type(1) {
+    color: #FF385C;
+}

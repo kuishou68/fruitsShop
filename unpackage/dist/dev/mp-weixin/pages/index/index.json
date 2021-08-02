@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "水果熟了",
+  "usingComponents": {
+    "uni-countdown": "/uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "zzx-tabs": "/components/zzx-tabs/zzx-tabs",
+    "bw-swiper": "/wxcomponents/bw-swiper/bw-swiper",
+    "footer": "/components/song-footer/song-footer"
+  }
+}

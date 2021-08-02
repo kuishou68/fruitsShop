@@ -1,0 +1,42 @@
+.w,
+.top-bar,
+.nav-wrapper {
+  width: 25.875rem;
+  margin: 0 auto;
+}
+view {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.top-bar {
+  height: 2.8125rem;
+  box-shadow: 0 0.25rem 0.5rem #ebe0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-bar .top-title {
+  font-size: 1.125rem;
+  color: #2d2d2d;
+  align-self: center;
+}
+.nav-wrapper {
+  height: 3.5rem;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-wrapper view,
+.nav-wrapper a {
+  display: block;
+  color: #2d2d2d;
+  text-align: center;
+  line-height: 3.5rem;
+}
+.nav-wrapper view:hover,
+.nav-wrapper a:hover {
+  color: #ff3861;
+}

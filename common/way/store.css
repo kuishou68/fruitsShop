@@ -1,0 +1,17 @@
+.store-wrapper {
+  width: 25.875rem;
+  height: 36.25rem;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
+}
+.store-wrapper .store-center {
+  width: 13.75rem;
+  height: 14.5rem;
+  font-size: 0.875rem;
+  color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

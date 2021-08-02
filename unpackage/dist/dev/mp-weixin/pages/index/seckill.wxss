@@ -1,0 +1,108 @@
+._a {
+  text-decoration: none;
+}
+page {
+  min-width: 320px;
+  width: 23.4375rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.box {
+  width: 23.4375rem;
+}
+.box-t ._img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.box-b {
+  width: 100%;
+  background-color: #510da8;
+}
+.box-b .box-b-c {
+  width: 21.875rem;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.box-b .box-b-c .qianggou {
+  width: 12.5rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.box-b .box-b-c .qianggou ._img {
+  width: 1.4375rem;
+  height: 1.4375rem;
+  margin: 1.4375rem 0.625rem 0 0;
+}
+.box-b .box-b-c .qianggou ._h3 {
+  font-size: 1rem;
+  color: #ff3861;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.box-b .box-b-c .jishi {
+  margin: 16px 0 0 16px;
+}
+.box-b .box-b-c .jishi ._i {
+  font-style: normal;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 0.3125rem;
+}
+.box-b .box-b-c .chanping view {
+  list-style: none;
+}
+.box-b .box-b-c .chanping view .goodsList {
+  border-bottom: 1px solid #ececec;
+}
+.box-b .box-b-c .chanping view view {
+  margin: 3px 10px 0px 10px;
+  height: 7.25rem;
+}
+.box-b .box-b-c .chanping view view ._img {
+  float: left;
+  margin-top: 10px;
+}
+.box-b .box-b-c .chanping view view ._h4 {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 20px 0 5px 5px;
+}
+.box-b .box-b-c .chanping view view ._i {
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #999999;
+}
+.box-b .box-b-c .chanping view view ._p {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #ff3861;
+  padding: 3px 7px;
+  margin-left: 10px;
+  border: 1px solid #ff3861;
+  border-radius: 5px;
+}
+.box-b .box-b-c .chanping view view view ._span:first-child {
+  font-size: 1rem;
+  color: #ff3861;
+}
+.box-b .box-b-c .chanping view view view ._span:nth-child(2) {
+  font-size: 0.75rem;
+  color: #999999;
+  text-decoration: line-through;
+}
+.box-b .box-b-c .chanping view view view ._a {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff3861;
+  padding: 8px;
+  margin-left: 2.5rem;
+  border-radius: 50px;
+}
+

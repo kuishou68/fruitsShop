@@ -1,0 +1,89 @@
+view {
+  display: inline-block;
+}
+.goods {
+  width: 25.875rem;
+  height: 13.75rem;
+  border-bottom: 0.75rem solid #f5f5f5;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+.goods .g-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333;
+  margin-top: 0.625rem;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+.goods .g-top .top-right {
+  color: #ff3861;
+}
+.goods .g-center {
+  width: 25.875rem;
+  height: 7.0625rem;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1.0625rem;
+}
+.goods .g-center img {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.goods .g-center .g-img-right {
+  width: 16.625rem;
+  height: 3.75rem;
+  margin-left: 0.625rem;
+}
+.goods .g-center .g-img-right text {
+  display: block;
+  height: 1.875rem;
+}
+.goods .g-center .g-img-right .num01 {
+  height: 0.9375rem;
+  display: flex;
+  justify-content: space-between;
+  color: #b6b6b6;
+}
+.goods .g-center .g-img-right .num02 {
+  height: 0.9375rem;
+  display: flex;
+  justify-content: flex-end;
+  color: #b6b6b6;
+}
+.goods .g-center .g-img-right .num02 .price1 {
+  text-decoration: line-through;
+}
+.goods .g-center .g-img-right .num02 .price2 {
+  color: #ff3861;
+  margin-left: 0.3125rem;
+}
+.goods .g-bottom {
+  height: 0.5rem;
+}
+.goods .g-bottom .bottom-right .btn {
+  width: 5rem;
+  height: 1.5625rem;
+  border-radius: 2.5rem;
+  line-height: 20px;
+  width: 78px;
+  font-size: 10px;
+}
+.goods .g-bottom .bottom-right .del {
+  border: 0.0625rem solid #aaaaaa;
+  color: #aaaaaa;
+  margin-right: 0.75rem;
+  background-color: #ffffff;
+  line-height: 20px;
+  width: 78px;
+  font-size: 10px;
+}
+.goods .g-bottom .bottom-right .group {
+  border: 0.0625rem solid #ff3861;
+  background-image: linear-gradient(to right, #f96562, #ff3861);
+  color: white;
+}

@@ -1,0 +1,51 @@
+
+.cardSwiper .swiper-item{
+	width:86%!important; 
+	overflow: initial;
+}
+.cardSwiper .swiper-item view{
+	width: 100%;
+	display: block;
+	height: 100%;
+	border-radius: 10rpx;
+	-webkit-transform: scale(0.93,0.8);
+	        transform: scale(0.93,0.8);
+	opacity: 0.7;
+	-webkit-transition: all 0.1s ease-in 0s;
+	transition: all 0.1s ease-in 0s;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-left:8.1%;
+}
+.cardSwiper .cur  view{
+	-webkit-transform:  initial;
+	        transform:  initial;
+	opacity: 1;
+	-webkit-transition: all 0.1s ease-in 0s;
+	transition: all 0.1s ease-in 0s;
+}
+.swiper-item view{
+	height:100%;
+	width:100%;
+	position: relative;
+}
+.swiperText{
+	position: absolute;
+	color:#ffffff;
+	z-index:2;
+	border-radius: 4rpx;
+	padding:0 4rpx;
+}
+.screen-swiper image{
+	width:100%;
+}
+.screen-swiper video,
+.swiper-item video {
+	width: 100%;
+	display: block;
+	height: 100%;
+}
+.swiperContent{
+	width:100%;
+}
+

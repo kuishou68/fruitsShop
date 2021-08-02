@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "限时秒杀",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-countdown": "/uni_modules/uni-countdown/components/uni-countdown/uni-countdown"
+  }
+}

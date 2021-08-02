@@ -1,0 +1,344 @@
+@import "common";
+
+body {
+    min-width: 320/16rem;
+    width: 414/16rem;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.outer {
+    width: 414/16rem;
+    height: 7500/16rem;
+    position: relative;
+}
+
+// 头部
+.header {
+    width: 414/16rem;
+    height: 46/16rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10/16rem rgba(0, 0, 0, .3);
+}
+
+// 左箭头
+.leftarr {
+    width: 16/16rem;
+    height: 16/16rem;
+    line-height: 16/16rem;
+    margin-top: 15/16rem;
+    margin-left: 15/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.rightbtn {
+    width: 124/16rem;
+    height: 38/16rem;
+    margin-top: 5/16rem;
+    margin-right: 15/16rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.searchtext {
+    width: 64/16rem;
+    height: 21/16rem;
+    margin-left: 90/16rem;
+    margin-top: 13/16rem;
+
+    span {
+        font-size: 16/16rem;
+    }
+}
+
+
+
+// 商品图片
+.pro {
+    width: 414/16rem;
+    height: 525/16rem;
+    border: 1.5/16rem solid #F3F3F3;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    .water {
+        width: 414/16rem;
+        height: 21/16rem;
+
+        p {
+            font-size: 14/16rem;
+            color: #666;
+        }
+    }
+
+    .proimg {
+        width: 414/16rem;
+        height: 389/16rem;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .mark {
+        width: 7/16rem;
+        height: 7/16rem;
+        background-color: #FF3861;
+        border: 1/16rem solid #FF3861;
+        border-radius: 7/16rem;
+        margin: 0 auto;
+        margin-top: 5/16rem;
+    }
+
+    .titles {
+        margin-top: 20/16rem;
+
+        p {
+            font-size: 21/16rem;
+            font-weight: bold;
+        }
+    }
+
+    .price {
+        width: 414/16rem;
+        height: 37/16rem;
+        margin-top: 5/16rem;
+
+        p {
+            font-size: 15/16rem;
+            color: #FF3861;
+            font-weight: bold;
+        }
+
+        .sp1 {
+            font-size: 25/16rem;
+            color: #FF3861;
+            font-weight: bold;
+        }
+
+        .sp2 {
+            font-size: 15/16rem;
+            color: #BBB;
+            text-decoration: line-through;
+            font-weight: bold;
+        }
+    }
+}
+
+// 商品详情
+.detail {
+    width: 414/16rem;
+    height: 70/16rem;
+    border: 5/16rem solid #F3F3F3;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    .active {
+        width: 369/16rem;
+        height: 22/16rem;
+        display: flex;
+        margin-left: 20/16rem;
+        margin-right: 25/16rem;
+        margin-top: 15/16rem;
+
+        .act1 {
+            font-size: 14/16rem;
+            color: #999;
+            margin-right: 50/16rem;
+        }
+
+        .act2 {
+            font-size: 14/16rem;
+            color: #333;
+        }
+    }
+}
+
+.service {
+    width: 414/16rem;
+    height: 22/16rem;
+    display: flex;
+    margin-left: 20/16rem;
+    margin-right: 25/16rem;
+    margin-top: 15/16rem;
+
+    .pser {
+        font-size: 14/16rem;
+        color: #999;
+        margin-right: 10/16rem;
+    }
+
+    .ptext {
+        font-size: 14/16rem;
+        color: #333;
+    }
+
+    .mark1 {
+        width: 22/16rem;
+        height: 22/16rem;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.liji {
+    width: 54/16rem;
+    height: 18/16rem;
+    border: 1/16rem solid #FFE8ED;
+    border-radius: 8/16rem;
+    background-color: #FFE8ED;
+    margin-right: 10/16rem;
+
+    p {
+        font-size: 5/16rem;
+        color: #FF3861;
+        line-height: 18/16rem;
+        text-align: center;
+    }
+
+}
+
+.score p {
+    font-size: 18/16rem;
+    color: #333;
+    margin-right: 50/16rem;
+    font-weight: bold;
+    margin-top: 6/16rem;
+    margin-left: 20/16rem;
+}
+.good-detail{
+		width: 414/16rem;
+		height: 2041/16rem;
+	image{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+.addshop {
+    width: 414/16rem;
+    height: 54/16rem;
+    background-color: white;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    box-shadow: 0 -2/16rem 3/16rem -1/16rem rgba(0, 0, 0, .3);
+
+    .shu {
+        height: 40/16rem;
+        width: 1/16rem;
+        background-color: #ECECEC;
+        margin-top: 5/16rem;
+    }
+}
+
+.shopcar {
+    width: 60/16rem;
+    height: 54/16rem;
+
+    .shopcarimg {
+        width: 30/16rem;
+        height: 25/16rem;
+        margin-left: 15/16rem;
+        margin-top: 5/16rem;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+}
+
+.shopcar .shopcartext p {
+    text-align: center;
+    margin-top: 3/16rem;
+    font-size: 12/16rem;
+    color: #333;
+}
+
+.show {
+    width: 60/16rem;
+    height: 54/16rem;
+
+    .showimg {
+        width: 38/16rem;
+        height: 28/16rem;
+        margin-left: 12/16rem;
+        margin-bottom: 5/16rem;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.show .showtext p {
+    text-align: center;
+    font-size: 12/16rem;
+    color: #333;
+}
+
+.er {
+    height: 15/16rem;
+    width: 15/16rem;
+    background-color: #FFC9D4;
+    border-radius: 15/16rem;
+    position: absolute;
+    bottom: 35/16rem;
+    left: 40/16rem;
+    position: fixed;
+    z-index: 9999;
+
+    .num {
+        height: 15/16rem;
+        width: 15/16rem;
+        font-size: 12/16rem;
+        color: #FF5175;
+        padding-left: 4/16rem;
+        margin: 0 auto;
+    }
+}
+
+.add {
+    height: 54/16rem;
+    width: 293/16rem;
+    background-color: #FF3861;
+    border-top-left-radius: 30/16rem;
+
+    p {
+        font-size: 20/16rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60/16rem;
+    }
+}
