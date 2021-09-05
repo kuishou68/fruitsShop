@@ -16,29 +16,13 @@
 		<!--分类商品-->
 		<jobSelect ref="jobSelect" :listData="listData" @confirem="confiremJob"></jobSelect>
 		
-		<!-- 加入购物车动画 -->
-		<!-- <template v-if="!isAdmin">
-			<shopCarAnimation ref="carAnmation"></shopCarAnimation>
-		</template> -->
-		
-		<!--左下角购物车-->
-		<view class="shopcart">
-		    <view class="shop">
-		        <img src="../../static/shopcart.png" alt="">
-		    </view>
-		    <view class="er">
-		        <view class="num">
-		        </view>
-		    </view>
-		</view>
+
 		<!--底部导航-->
 		<Footer></Footer>
 	</view>
 </template>
 
 <script>
-	// // 加入购物车动画组件
-	// import shopCarAnimation from '@/components/add-shopcar-animation.vue'
 	// 商品分类展示组件
 	import jobSelect from '@/components/yunmiao-jobSelect/yunmiao-jobSelect.vue'
 	// 底部栏
@@ -89,7 +73,31 @@
 					"id": 14,
 					"name": "用心服务",
 				}],
-
+				recomendList:[{
+					goods_id: 1,
+					goods_name:'【大粒蓝莓】约200g/份晶莹剔透，饱满汁多',
+					goods_img_url:'../../static/首页-商品_10.png',
+					goods_newPrice: 12.8,
+					goods_price: 10.8
+				},{
+					goods_id: 2,
+					goods_name:'【脆李】约500g/份晶莹剔透，饱满汁多',
+					goods_img_url:'../../static/首页-商品_12.png',
+					goods_newPrice: 9.8,
+					goods_price: 18.8
+				},{
+					goods_id: 3,
+					goods_name:'【极品葡萄】约500g/份晶莹剔透，饱满汁多',
+					goods_img_url:'../../static/首页-商品_03.png',
+					goods_newPrice: 22.8,
+					goods_price: 19.8
+				},{
+					goods_id: 4,
+					goods_name:'【泰龙】约100g/份晶莹剔透，饱满汁多',
+					goods_img_url:'../../static/首页-商品_06.png',
+					goods_newPrice: 15.8,
+					goods_price: 13.8
+				}]
 			}
 		},
 		components: {
@@ -103,6 +111,12 @@
 			},
 			confiremJob(e) {
 				console.log(e)
+			},
+			addShopCar(e){
+				console.log('加入购物车');
+				console.log(e);
+				// 成功的话，调用加入购物车动画
+				this.$refs.carAnmation.touchOnGoods(e);
 			}
 		}
 	}
@@ -189,5 +203,77 @@
 		flex: 1
 	}
 	
+	
+	
+	.index-commodity {
+		background: #f5f6f9;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.index-commodity-detail {
+		background-color: #FFFFFF;
+		border-radius: 5%;
+		margin: 1px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.index-commodity-detail img {
+		width: 30%;
+		border-radius: 5%;
+		margin-top: 8px;
+		height: 86px;
+	}
+	
+	/*商品价格*/
+	.index-commodity-price {
+		float: right;
+		width: 68%;
+		padding-top: 10rpx;
+	}
+	
+	.index-commodity-price navigator text {
+		line-height: 30px;
+		float: left;
+	}
+	.index-commodity-price navigator text:nth-of-type(1){
+		font-size: 28rpx;
+	}
+	.index-commodity-price navigator text:nth-of-type(2){
+		clear: both;
+		font-size: 18px;
+		color: #FF3861;
+		font-weight: bold;
+	}
+	.index-commodity-price navigator text:nth-of-type(3) {
+		font-size: 12px;
+		color: #999;
+		margin-left: 3px;
+		text-decoration: line-through;
+	}
+	
+	.index-commodity-price navigator text:nth-of-type(4) {
+		clear: both;
+		font-size: 15px;
+		color: #999;
+		text-decoration: line-through;
+	}
+	
+	.index-commodity-add {
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		background: #FF3861;
+		float: right;
+		margin: 0 10rpx 10rpx 0;
+	}
+	
+	.index-commodity-add text:nth-of-type(1) {
+		font-size: 30px;
+		color: #FFFFFF;
+		line-height: 0.9;
+		margin-left: 4px;
+	}
 
 </style>

@@ -1,0 +1,45 @@
+{
+	"bsonType": "object",
+	"required": ["name", "comment"],
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "任务名称",
+			"title": "任务名称",
+			"trim": "both"
+		},
+		"comment": {
+			"bsonType": "string",
+			"description": "任务描述",
+			"title": "任务描述",
+			"trim": "both"
+		},
+		"bounty": {
+			"bsonType": "int",
+			"description": "任务完成后的奖励积分",
+			"title": "奖励积分"
+		},
+		"max_per_hour": {
+			"bsonType": "int",
+			"description": "每小时允许执行的最大次数"
+		},
+		"max_per_day": {
+			"bsonType": "int",
+			"description": "每天允许执行的最大次数"
+		},
+		"max_per_week": {
+			"bsonType": "int",
+			"description": "每周允许执行的最大次数"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"defaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

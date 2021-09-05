@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "shop-car-animation": "/components/add-shopcar-animation"
+  }
 }

@@ -102,6 +102,28 @@ export default {
 								isChecked:false,
 								// 滚动条
 								scrollLeft:0,
+							},
+							{
+								cart_id:1,
+								goods_name:'【泰龙】约500g/份',
+								reduce_price:15,  // 原价
+								goods_price:13.8, // 现价
+								goods_num:1,
+								goods_image_url:'../../static/首页-商品_06.png',
+								isChecked:false,
+								// 滚动条
+								scrollLeft:0,
+							},
+							{
+								cart_id:2,
+								goods_name:'【甜葡萄】约250g/份',
+								reduce_price:7.99,  // 原价
+								goods_price:6.99, // 现价
+								goods_num:1,
+								goods_image_url:'../../static/首页-商品_03.png',
+								isChecked:false,
+								// 滚动条
+								scrollLeft:0,
 							}
 						],
 					}
@@ -381,6 +403,7 @@ export default {
 	.shoppingcar .dianpu{
 		background-color: #FFFFFF;
 		margin-bottom: 20upx;
+		height: 565px;
 		.chekAll{
 			font-size: 30upx;
 		}

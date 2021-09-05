@@ -1,0 +1,34 @@
+{
+	"bsonType": "object",
+	"required": ["user_id", "task_id"],
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "用户id，参考uni-id-users表",
+			"foreignKey": "uni-id-users._id"
+		},
+		"task_id": {
+			"bsonType": "string",
+			"description": "任务ID",
+			"foreignKey": "uni-id-task._id"
+		},
+		"result": {
+			"bsonType": "bool",
+			"description": "任务执行结果，true:成功，false：失败"
+		},
+		"bounty": {
+			"bsonType": "int",
+			"description": "奖励积分"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		}
+	}
+}

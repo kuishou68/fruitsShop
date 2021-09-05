@@ -1,0 +1,42 @@
+{
+	"bsonType": "object",
+	"required": ["content"],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "搜索人id，参考uni-id-users表"
+		},
+		"device_uuid": {
+			"bsonType": "string",
+			"description": "设备id"
+		},
+		"platform": {
+			"bsonType": "string",
+			"description": "设备平台，如：mp-weixin、app-plus等"
+		},
+		"content": {
+			"bsonType": "string",
+			"description": "搜索内容"
+		},
+		"ip": {
+			"bsonType": "string",
+			"description": "客户端IP地址",
+			"forceDefaultValue": {
+				"$env": "clientIP"
+			}
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "统计时间"
+		}
+	}
+}

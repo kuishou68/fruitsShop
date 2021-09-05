@@ -81,30 +81,6 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var l0 = _vm.__map(_vm.list, function(item, index) {
-    var $orig = _vm.__get_orig(item)
-
-    var m0 = _vm.current == index ? __webpack_require__(/*! @/static/首页-商品_03.png */ 20) : null
-    var m1 = _vm.current == index ? __webpack_require__(/*! @/static/首页-商品_06.png */ 22) : null
-    var m2 = _vm.current == index ? __webpack_require__(/*! @/static/首页-商品_12.png */ 23) : null
-    var m3 = _vm.current == index ? __webpack_require__(/*! @/static/首页-商品_10.png */ 21) : null
-    return {
-      $orig: $orig,
-      m0: m0,
-      m1: m1,
-      m2: m2,
-      m3: m3
-    }
-  })
-
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        l0: l0
-      }
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -138,111 +114,80 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 137));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default2 =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 137));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var shopCarAnimation = function shopCarAnimation() {Promise.all(/*! require.ensure | components/add-shopcar-animation */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/add-shopcar-animation")]).then((function () {return resolve(__webpack_require__(/*! @/components/add-shopcar-animation.vue */ 156));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default2 =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   name: 'jobSelect',
   props: {
@@ -282,9 +227,37 @@ var _default2 =
       iconColor: 'primary',
       showAction: false,
       searchList: [],
-      scrollHeight: 500 };
+      scrollHeight: 500,
+      recomendList: [{
+        goods_id: 1,
+        goods_name: '【大粒蓝莓】约200g/份晶莹剔透，饱满汁多',
+        goods_img_url: '../../static/首页-商品_10.png',
+        goods_newPrice: 12.8,
+        goods_price: 10.8 },
+      {
+        goods_id: 2,
+        goods_name: '【脆李】约500g/份晶莹剔透，饱满汁多',
+        goods_img_url: '../../static/首页-商品_12.png',
+        goods_newPrice: 9.8,
+        goods_price: 18.8 },
+      {
+        goods_id: 3,
+        goods_name: '【极品葡萄】约500g/份晶莹剔透，饱满汁多',
+        goods_img_url: '../../static/首页-商品_03.png',
+        goods_newPrice: 22.8,
+        goods_price: 19.8 },
+      {
+        goods_id: 4,
+        goods_name: '【泰龙】约100g/份晶莹剔透，饱满汁多',
+        goods_img_url: '../../static/首页-商品_06.png',
+        goods_newPrice: 15.8,
+        goods_price: 13.8 }] };
+
 
   },
+  components: {
+    shopCarAnimation: shopCarAnimation },
+
   created: function created() {
     var that = this;
     uni.getSystemInfo({
@@ -365,6 +338,12 @@ var _default2 =
         });
       });
       this.searchList = arr;
+    },
+    addShopCar: function addShopCar(e) {
+      console.log('加入购物车');
+      console.log(e);
+      // 成功的话，调用加入购物车动画
+      this.$refs.carAnmation.touchOnGoods(e);
     } } };exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

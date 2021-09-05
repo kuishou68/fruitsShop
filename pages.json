@@ -17,7 +17,7 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "商品分类",
-                "enablePullDownRefresh": true  //是否开启下拉刷新
+                "enablePullDownRefresh": false  //是否开启下拉刷新
             }
             
         },{

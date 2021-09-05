@@ -1,5 +1,5 @@
 <template>
-	<u-popup v-model="showModel" mode="right" width="100%" height="100%">
+	<uni-popup v-model="showModel" mode="right" width="100%" height="100%">
 		<view class="u-wrap">
 			<!-- <view class="u-search-box">
 				<u-search style="flex: 1;" placeholder="请输入关键词" @focus="focus" @change="toSearch" @custom="cancle" v-model="keyword"
@@ -16,7 +16,9 @@
 					</view>
 				</scroll-view>
 			</view>
+			
 			<view class="u-menu-wrap">
+				<!--左边侧边栏选项卡-->
 				<scroll-view scroll-y scroll-with-animation class="u-tab-view menu-scroll-view" :scroll-top="scrollTop">
 					<view v-for="(item,index) in list" :key="index" class="u-tab-item"
 						:class="[current==index ? 'u-tab-item-active' : '']" :data-current="index"
@@ -24,88 +26,84 @@
 						<text class="u-line-2">{{item[labelName]}}</text>
 					</view>
 				</scroll-view>
+				<!--右边商品卡片-->
 				<block v-for="(item,index) in list" :key="index" >
 					<scroll-view scroll-y class="right-box" v-if="current==index">
 						<view class="page-view">
 							<view class="class-item">
 								<view class="item-container">
-									<!-- <view class="thumb-box" v-for="(item1, index1) in item.children" :key="index1"
-										@click="selval(item1)">
-										<view :class="[value==item1[valueName] ? 'item-active' : '']">
-											<text>{{item1[labelName]}}</text>
-										</view>
-										<u-icon v-if="value==item1[valueName]" name="checkbox-mark" :color="iconColor"
-											size="28">
-										</u-icon>
-									</view> -->
-									<view class="index-commodity" >
-										<view class="index-commodity-detail">
-											<img src="@/static/首页-商品_03.png" />
+									<!--商品1-->
+									<!-- <view class="index-commodity" v-for="(item, index) in recomendList" :key="index">
+										<view class="index-commodity-detail" >
+											<img :src="item.goods_img_url" mode=""/>
 											<view class="index-commodity-price">
 												<navigator url="./prodetails">
-													<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-													<text>￥13.80</text><br />
-													<text>￥15.00</text>
+													<text>{{ item.goods_name }}</text><br />
+													<text>￥{{ item.goods_newPrice }}</text><br />
+													<text>￥{{ item.goods_price }}</text>
 												</navigator>
-												<view class="index-commodity-add" @click="addShopCar()">
+												<view class="index-commodity-add" :id="item.goods_id" :data-img="item.goods_image_url" @tap="addShopCar">
 													<text>+</text>
+													<img :src="item.goods_img_url" mode=""/>
 												</view>
+												
 											</view>
-											
 										</view>
-									</view>
-									<!-- <navigator class="index-commodity"  url="./prodetails">
-										<view class="index-commodity-detail">
-											<img src="@/static/首页-商品_06.png" />
+									</view> -->
+									<unicloud-db 
+										v-slot:default="{data, loading, error, options}" 
+										collection="opendb-mall-goods"  
+										orderby="category_id asc"
+										>
+										<view v-if="error" >{{error.message}}</view>
+										<view class="index-commodity-detail" v-for="(item,index) in data" :key="index" >
+											<img :src="item.goods_thumb" mode=""/>
 											<view class="index-commodity-price">
-												<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-												<text>￥13.80</text><br />
-												<text>￥15.00</text>
-												<view class="index-commodity-add">
+												<navigator url="./prodetails">
+													<text>{{ item.name }}</text><br />
+													<text>￥{{ item.goods_price }}</text><br />
+													<text>￥{{ item.goods_newPrice }}</text>
+												</navigator>
+												<view class="index-commodity-add" :id="item.goods_id" :data-img="item.goods_image_url" @tap="addShopCar">
 													<text>+</text>
+													<img :src="item.goods_img_url" mode=""/>
 												</view>
+												
 											</view>
 										</view>
-									</navigator>
-									<navigator class="index-commodity"  url="./prodetails">
-										<view class="index-commodity-detail">
-											<img src="@/static/首页-商品_12.png" />
-											<view class="index-commodity-price">
-												<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-												<text>￥13.80</text><br />
-												<text>￥15.00</text>
-												<view class="index-commodity-add">
-													<text>+</text>
-												</view>
-											</view>
-										</view>
-									</navigator>
-									<navigator class="index-commodity"  url="./prodetails">
-										<view class="index-commodity-detail">
-											<img src="@/static/首页-商品_10.png" />
-											<view class="index-commodity-price">
-												<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-												<text>￥13.80</text>
-												<text>￥15.00</text>
-												<view class="index-commodity-add">
-													<text>+</text>
-												</view>
-											</view>
-										</view>
-									</navigator>
-									 -->
+										<view v-if="loading">加载中...</view>
+									</unicloud-db>
+									<view style="clear: both;"></view>
 								</view>
 							</view>
 						</view>
 					</scroll-view>
-					
 				</block>
+				
+			</view>
+			<!-- 加入购物车动画 -->
+			<!-- <template v-if="!isAdmin">
+				<shopCarAnimation ref="carAnmation"></shopCarAnimation>
+			</template> -->
+			<view>
+				<shopCarAnimation ref="carAnmation"></shopCarAnimation>
 			</view>
 		</view>
-	</u-popup>
+	</uni-popup>
 </template>
 
 <script>
+	// 加入购物车动画组件
+	import shopCarAnimation from '@/components/add-shopcar-animation.vue'
+	// 获取db引用
+	const db = uniCloud.database()
+	db.collection('opendb-mall-goods')
+	.get().then((res)=>{
+		console.log(res);
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
 	export default {
 		name: 'jobSelect',
 		props: {
@@ -145,8 +143,12 @@
 				iconColor: 'primary',
 				showAction: false,
 				searchList: [],
-				scrollHeight: 500
+				scrollHeight: 500,
+				
 			}
+		},
+		components:{
+			shopCarAnimation
 		},
 		created() {
 			var that = this;
@@ -229,8 +231,16 @@
 				})
 				this.searchList = arr;
 			},
-			addShopCar(){
-				console.log('加入购物车')
+			
+			// async getScroll(){
+			// 	let res = await uniCloud.database().collection("opendb-mall-goods").get();
+			// 	console.log(res)
+			// },
+			addShopCar(e){
+				console.log('加入购物车');
+				console.log(e);
+				// 成功的话，调用加入购物车动画
+				this.$refs.carAnmation.touchOnGoods(e);
 			}
 		}
 	}

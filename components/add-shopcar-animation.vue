@@ -2,10 +2,12 @@
 	<view>
 		<view class="container">
 			<!-- 底部购物车 -->
-			<view class="shopcar-bus" @tap="toShopCarPage">
-				<image src="@/static/shopcar.png"></image>
-				<view class="count" v-show="!hideCount">{{count}}</view>
+			<view class="shopcar-bus " @tap="toShopCarPage">
+				<image src="@/static/shopcart.png"></image>
+				<!-- <view class="count" v-show="!hideCount">{{count}}</view> -->
+				<view class="count" >{{count}}</view>
 			</view>
+			
 			<!-- 加入购物车的小球 -->
 			<view class="good_box" v-show="!hide_good_box" :style="{left:bus_x+'px;',top:bus_y+'px;'}">
 				<image :src="imgUrl"></image>
@@ -91,11 +93,14 @@
 			},
 			// 进入到购物车的页面
 			toShopCarPage() {
-				console.log(123);
 				uni.navigateTo({
-					url: '/pages/index/shoppingcar',
-					success: res => {},
-					fail: () => {},
+					url: '../../pages/shopCart/shopCart',
+					success: res => {
+						console.log('跳转成功！');
+					},
+					fail: () => {
+						console.log('跳转失败！');
+					},
 					complete: () => {}
 				});
 			}
@@ -106,23 +111,23 @@
 	}
 </script>
 <style lang="scss">
-
 	.container {
 		.shopcar-bus {
-		  width: 40px;
-		  height: 40px;
+		  height: 3.125rem;
+		  width: 3.125rem;
 		  position: fixed;
-		  left: 85%;
-		  top: 85%;
+		  left: 10%;
+		  top: 84%;
 		  border-radius: 50%;
 		  box-sizing: border-box;
+		  background-color: rgba(0, 0, 0, 0.5);
 		  image {
-		    width: 100%;
-		    height: 100%;
+		    width: 2rem;
+			height: 2rem;
 		    position: absolute;
 		    left: 50%;
 		    top: 50%;
-		    margin: -16px;
+		    margin: -15px;
 			margin-right: 14upx;
 		  }
 		  .count {
@@ -155,4 +160,5 @@
 		  height: 100%;
 		}
 	}
+	
 </style>

@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "商品分类",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "usingComponents": {
     "job-select": "/components/yunmiao-jobSelect/yunmiao-jobSelect",
     "footer": "/components/song-footer/song-footer"

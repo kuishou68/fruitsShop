@@ -74,4 +74,67 @@
   -webkit-flex: 1;
           flex: 1;
 }
+.index-commodity {
+  background: #f5f6f9;
+  width: 100%;
+  height: 100%;
+}
+.index-commodity-detail {
+  background-color: #FFFFFF;
+  border-radius: 5%;
+  margin: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.index-commodity-detail ._img {
+  width: 30%;
+  border-radius: 5%;
+  margin-top: 8px;
+  height: 86px;
+}
+/*商品价格*/
+.index-commodity-price {
+  float: right;
+  width: 68%;
+  padding-top: 10rpx;
+}
+.index-commodity-price navigator text {
+  line-height: 30px;
+  float: left;
+}
+.index-commodity-price navigator text:nth-of-type(1) {
+  font-size: 28rpx;
+}
+.index-commodity-price navigator text:nth-of-type(2) {
+  clear: both;
+  font-size: 18px;
+  color: #FF3861;
+  font-weight: bold;
+}
+.index-commodity-price navigator text:nth-of-type(3) {
+  font-size: 12px;
+  color: #999;
+  margin-left: 3px;
+  text-decoration: line-through;
+}
+.index-commodity-price navigator text:nth-of-type(4) {
+  clear: both;
+  font-size: 15px;
+  color: #999;
+  text-decoration: line-through;
+}
+.index-commodity-add {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #FF3861;
+  float: right;
+  margin: 0 10rpx 10rpx 0;
+}
+.index-commodity-add text:nth-of-type(1) {
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 0.9;
+  margin-left: 4px;
+}
 

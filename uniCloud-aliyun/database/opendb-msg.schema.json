@@ -1,0 +1,64 @@
+{
+	"bsonType": "object",
+	"required": ["to_uid", "body", "type"],
+	"permission": {
+		"read": "auth.uid == doc.to_uid || auth.uid == doc.from_uid",
+		"create": "auth.uid != null",
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"from_uid": {
+			"bsonType": "string",
+			"description": "消息发送方 UserID（用于指定发送消息方帐号）",
+			"forceDefaultValue": {
+				"$env": "uid"
+			}
+		},
+		"to_uid": {
+			"description": "消息接收方 UserID",
+			"bsonType": "string"
+		},
+		"is_read": {
+			"description": "是否已读",
+			"bsonType": "bool",
+			"forceDefaultValue": false
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "消息发送时间戳",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"body": {
+			"bsonType": "object",
+			"description": "消息内容，包含的键会随type变化。需要自己写valedateFunction验证"
+		},
+		"type": {
+			"bsonType": "string",
+			"enum": [{
+				"text": "文本",
+				"value": "text"
+			}, {
+				"text": "图像",
+				"value": "image"
+			}, {
+				"text": "语音",
+				"value": "sound"
+			}, {
+				"text": "视频",
+				"value": "video"
+			}, {
+				"text": "文件",
+				"value": "file"
+			}, {
+				"text": "位置",
+				"value": "location"
+			}]
+		}
+	}
+}

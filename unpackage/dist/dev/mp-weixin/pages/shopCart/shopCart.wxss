@@ -638,7 +638,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 			display: -webkit-box;
 			display: -webkit-flex;
 			display: flex;
-			position: fixed;
+			
 			top: 563px;
 			background-color: white;
 }
@@ -693,6 +693,7 @@ page{
 .shoppingcar .dianpu {
   background-color: #FFFFFF;
   margin-bottom: 20rpx;
+  height: 565px;
 }
 .shoppingcar .dianpu .chekAll {
   font-size: 30rpx;
