@@ -63,7 +63,7 @@
 		justify-content: center;
 	}
 	.inner text:nth-of-type(1){
-		font-size: 32px;
+		font-size: 25px;
 		color: #999;
 	}
 	.inner:hover text:nth-of-type(1){

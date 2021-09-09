@@ -1,25 +1,31 @@
 <template>
 	<view>
 	 <!-- 商品图片 -->
-        <view class="pro">
+	 <unicloud-db
+	  v-slot:default="{data, error}"
+	  collection="opendb-mall-goods"  
+	  where="_id=='6138af0feb2f8b000153307c'"
+	  >
+		<view v-if="error">{{ error.message }}</view>
+       <view class="pro" v-for="(item, index) in data" :key="index">
             <view class="proimg">
-				
-                <img src="../../static/proimg.png">
+                <img :src="item.goods_thumb">
             </view>
             <view class="mark">
             </view>
             <view class="titles">
-                <p>&nbsp;&nbsp;&nbsp;【农夫山泉】&nbsp;550ml/瓶</p>
+				<p>{{ item.name }}</p>
             </view>
             <view class="water">
-                <p>&nbsp;&nbsp;&nbsp;纯净水</p>
+                <p>&nbsp;&nbsp;&nbsp;{{ item.goods_desc }}</p>
             </view>
             <view class="price">
-                <p>&nbsp;&nbsp;&nbsp;￥<span class="sp1">1.50</span>&nbsp;&nbsp;
-                    <span class="sp2">￥2.00</span>
+                <p>&nbsp;&nbsp;&nbsp;￥<span class="sp1">{{ item.goods_newPrice }}</span>&nbsp;&nbsp;
+                    <span class="sp2">￥{{ item.goods_price }}</span>
                 </p>
             </view>
-        </view>
+        </view> 
+		</unicloud-db>
         <!-- 商品介绍 -->
         <view class="detail">
             <view class="service">
@@ -44,22 +50,26 @@
             <p>用户评价</p>
 			
         </view> -->
+		<unicloud-db
+			v-slot="{data, error}"
+			collection="opendb-mall-goods"
+			where="_id=='6138af0feb2f8b000153307c'"
+			>
 		<view class="good-detail">
 			<image src="../../static/proimg-1.png" style=""></image>
 		</view>
 		
-		
 		<!-- 商品介绍 -->
-        <view class="addshop">
+        <view class="addshop" v-for="(item, index) in data" :key="index">
             <view class="shopcar">
                 <view class="shopcarimg"><img src="../../static/shopcar.png"></view>
                 <view class="er">
-                    <view class="num">
-                        <p>1</p>
+                    <view class="num" @tap="toShopCarPage">
+                        <p class="count">{{ count }}</p>
                     </view>
                 </view>
                 <view class="shopcartext">
-                    <p>购物车</p>
+                    <navigator url="../shopCart/shopCart">购物车</navigator>
                 </view>
             </view>
             <view class="shu"></view>
@@ -69,25 +79,52 @@
                     <p>分享</p>
                 </view>
             </view>
-            <view class="add">
-                <p>加入购物车
-                </p>
+            <view class="add" :id="item.goods_id" @tap="addshopCar">
+                <p>加入购物车</p>
             </view>
         </view>
-		
+		</unicloud-db>
+		<view>
+			<shopCarAnimation ref="carAnmation"></shopCarAnimation>
+		</view>
 	</view>
 </template>
 
 <script>
-	
+	const db = uniCloud.database()
+	db.collection('opendb-mall-goods')
+	.get().then((res)=>{
+		console.log(res)
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
+	// 加入购物车动画组件
+	import shopCarAnimation from '@/components/add-shopcar-animation.vue'
 	export default {
 		data() {
 			return {
-
+				count: 0,
 			}
 		},
-		methods: {
-
+		onLoad: function(){
+			that.count = 0;
+		},
+		components:{
+			shopCarAnimation
+		},
+		methods:{
+			addshopCar(e){
+				console.log('加入购物车');
+				console.log(e);
+				// 成功的话，调用加入购物车动画
+				// this.$refs.carAnmation.touchOnGoods(e);
+				this.touchOnGoods(e);
+			},
+			// 购物车小图标动态+1
+			touchOnGoods(e){
+				console.log(e)
+			}
 		}
 	}
 </script>

@@ -122,6 +122,7 @@
 				<text>鲜果现切</text><br/>
 				<text>免洗即食</text>
 			</view> -->
+			<!--Tab选项卡-->
 			<view class="index-nav-text">
 				<zzx-tabs :items="items" :current="current" @clickItem="onClickItem" ref="mytabs">
 				</zzx-tabs>
@@ -131,188 +132,228 @@
 				<!--实惠好果-->
 				<view v-show="current === 0">
 					<view class="index-commodity">
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_03.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
+						<view class="index-commodity-row" >
+							<!--unicloud-db数据渲染标签-->
+							<unicloud-db
+								v-slot:default="{data, loading, error, options}" 
+								collection="opendb-mall-goods"  
+								orderby="category_id asc"
+								>
+								<view v-if="error">{{ error.message }}</view>
+								<view class="index-commodity-detail" v-for="(item, index) in data" :key="index">
+									<img :src="item.goods_thumb" /><br />
+									<text>{{item.name}}</text><br />
+									<view class="index-commodity-price">
+										<text >晶莹剔透，饱满汁多</text><br />
+										<text>￥{{ item.goods_price }}</text><br />
+										<text>￥{{ item.goods_newPrice}}</text>
+									</view>
+									<view class="index-commodity-add">
+										<text>+</text>
+									</view>
+								</view>
+								<view v-if="loading">加载中...</view>
+							</unicloud-db>
 						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_10.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<!-- <view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_10.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_03.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
+							
 						</view>
-						
+					 -->
 					</view>
 				</view>
 				<!--特惠量版-->
 				<view v-show="current === 1">
 					<view class="index-commodity">
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_06.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row" style="" >
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_06.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_10.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_12.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_10.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_06.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_12.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_06.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
 				<view v-show="current === 2">
 					<view class="index-commodity">
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_12.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_12.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_06.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_03.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_06.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_12.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_03.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_12.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
+						
 					</view>
 				</view>
 				<view v-show="current === 3">
 					<view class="index-commodity">
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_06.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_06.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_12.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
-							</view>
-						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_06.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
-							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_12.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
-						<view class="index-commodity-detail">
-							<img src="../../static/首页-商品_12.png" /><br />
-							<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
-							<view class="index-commodity-price">
-								<text >晶莹剔透，饱满汁多</text><br />
-								<text>￥13.80</text><br />
-								<text>￥15.00</text>
+						<view class="index-commodity-row">
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_06.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
-							<view class="index-commodity-add">
-								<text>+</text>
+							<view class="index-commodity-detail">
+								<img src="../../static/首页-商品_12.png" /><br />
+								<text>【泰龙】约100g/份晶莹剔透，饱满汁多</text><br />
+								<view class="index-commodity-price">
+									<text >晶莹剔透，饱满汁多</text><br />
+									<text>￥13.80</text><br />
+									<text>￥15.00</text>
+								</view>
+								<view class="index-commodity-add">
+									<text>+</text>
+								</view>
 							</view>
 						</view>
+						
 					</view>
 					
 				</view>
@@ -332,7 +373,15 @@
 	import zzxTabs from "@/components/zzx-tabs/zzx-tabs.vue"
 	// 引入底部导航栏
 	import Footer from '@/components/song-footer/song-footer.vue'
-
+	// 获取db引用
+	const db = uniCloud.database()
+	db.collection('opendb-mall-goods')
+	.get().then((res)=>{
+		console.log(res);
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
 	export default {
 		data() {
 			return {
@@ -342,7 +391,6 @@
 				duration: 500,
 				current: 0,
 				items: ['实惠好果', '特惠量版', '凑单专区', '鲜果现切'],
-				
 			}
 		},
 		onLoad() {
@@ -378,7 +426,6 @@
 			removeMydot() {
 				this.$refs.mytabs.removeDot(0);
 			}
-
 		}
 	}
 </script>
@@ -615,6 +662,7 @@
 
 	.index-nav-text {
 		background-color: #fff;
+		height: 70rpx;
 	}
 
 	/*分类商品*/
@@ -624,10 +672,13 @@
 		height: 100%;
 		display: flex;
 	}
-
+	
+	.index-commodity-row{
+		max-width: 414px;
+	}
+	
 	.index-commodity-detail {
-		width: 47%;
-		height: 100%;
+		height: 50%;
 		background-color: #FFFFFF;
 		border-radius: 5%;
 		margin: 5px;

@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "水果熟了"
+				"navigationBarTitleText": "水果商城"
 			}
 		},{
 			"path":"pages/index/seckill",
@@ -66,7 +66,7 @@
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "水果熟了",
+		"navigationBarTitleText": "水果商城",
 		"navigationBarBackgroundColor": "#ff3861",
 		"backgroundColor": "#ff3861"
 	},

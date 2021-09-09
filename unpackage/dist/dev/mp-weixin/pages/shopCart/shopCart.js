@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var checkBox = function checkBox() {__webpack_require__.e(/*! require.ensure | components/custom-checkbox */ "components/custom-checkbox").then((function () {return resolve(__webpack_require__(/*! @/components/custom-checkbox.vue */ 149));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Footer = function Footer() {__webpack_require__.e(/*! require.ensure | components/song-footer/song-footer */ "components/song-footer/song-footer").then((function () {return resolve(__webpack_require__(/*! @/components/song-footer/song-footer.vue */ 104));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var checkBox = function checkBox() {__webpack_require__.e(/*! require.ensure | components/custom-checkbox */ "components/custom-checkbox").then((function () {return resolve(__webpack_require__(/*! @/components/custom-checkbox.vue */ 154));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Footer = function Footer() {__webpack_require__.e(/*! require.ensure | components/song-footer/song-footer */ "components/song-footer/song-footer").then((function () {return resolve(__webpack_require__(/*! @/components/song-footer/song-footer.vue */ 104));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 

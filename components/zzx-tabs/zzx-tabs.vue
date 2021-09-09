@@ -5,8 +5,7 @@
 			:style="{
 				width: iwidth,
 				color: index === currentIndex ? activeColor : defaultColor
-				}"
-				>
+				}">
 				<slot v-bind:item="item">
 					<text class="item-title" :class="dots[index] ? 'dot-show' : ''">{{item}}</text>
 				</slot>

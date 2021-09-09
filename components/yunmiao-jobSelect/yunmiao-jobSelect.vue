@@ -1,10 +1,7 @@
 <template>
 	<uni-popup v-model="showModel" mode="right" width="100%" height="100%">
 		<view class="u-wrap">
-			<!-- <view class="u-search-box">
-				<u-search style="flex: 1;" placeholder="请输入关键词" @focus="focus" @change="toSearch" @custom="cancle" v-model="keyword"
-					:show-action="showAction" action-text="取消"></u-search>
-			</view> -->
+
 			<view class="search-warp"  v-if="showAction">
 				<scroll-view scroll-y  :style="{'height': scrollHeight+'px'}" class="item-container">
 					<view class="thumb-box" v-for="(item, index) in searchList" :key="index" @click="selval(item)">
@@ -32,24 +29,6 @@
 						<view class="page-view">
 							<view class="class-item">
 								<view class="item-container">
-									<!--商品1-->
-									<!-- <view class="index-commodity" v-for="(item, index) in recomendList" :key="index">
-										<view class="index-commodity-detail" >
-											<img :src="item.goods_img_url" mode=""/>
-											<view class="index-commodity-price">
-												<navigator url="./prodetails">
-													<text>{{ item.goods_name }}</text><br />
-													<text>￥{{ item.goods_newPrice }}</text><br />
-													<text>￥{{ item.goods_price }}</text>
-												</navigator>
-												<view class="index-commodity-add" :id="item.goods_id" :data-img="item.goods_image_url" @tap="addShopCar">
-													<text>+</text>
-													<img :src="item.goods_img_url" mode=""/>
-												</view>
-												
-											</view>
-										</view>
-									</view> -->
 									<unicloud-db 
 										v-slot:default="{data, loading, error, options}" 
 										collection="opendb-mall-goods"  
@@ -66,7 +45,7 @@
 												</navigator>
 												<view class="index-commodity-add" :id="item.goods_id" :data-img="item.goods_image_url" @tap="addShopCar">
 													<text>+</text>
-													<img :src="item.goods_img_url" mode=""/>
+													<!-- <img :src="item.goods_img_url" mode=""/> -->
 												</view>
 												
 											</view>
@@ -231,11 +210,6 @@
 				})
 				this.searchList = arr;
 			},
-			
-			// async getScroll(){
-			// 	let res = await uniCloud.database().collection("opendb-mall-goods").get();
-			// 	console.log(res)
-			// },
 			addShopCar(e){
 				console.log('加入购物车');
 				console.log(e);

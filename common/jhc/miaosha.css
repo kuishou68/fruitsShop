@@ -64,10 +64,10 @@ body {
 .box-b .box-b-c .chanping view view img {
   float: left;
   margin-top: 10px;
+  width: 30%;
 }
 .box-b .box-b-c .chanping view view h4 {
   font-size: 1rem;
-  display: inline-block;
   margin: 20px 0 5px 5px;
 }
 .box-b .box-b-c .chanping view view i {
@@ -94,10 +94,10 @@ body {
   text-decoration: line-through;
 }
 .box-b .box-b-c .chanping view view view a {
-  font-size: 1rem;
+  float: right;
+  font-size: 0.9rem;
   color: #fff;
   background-color: #ff3861;
-  padding: 8px;
-  margin-left: 2.5rem;
+  padding: 4px;
   border-radius: 50px;
 }

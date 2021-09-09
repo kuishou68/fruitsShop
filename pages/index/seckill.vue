@@ -20,65 +20,24 @@
 				backgroundColor="#333"
 				></uni-countdown>
 		  </view>
-		  
           <view class="chanping">
-            <view>
-              <view class="goodsList">
-                <img src="../../static/miaosha_03.jpg" alt="" />
-                <h4>【甜葡萄】 约250g/份</h4>
-                <i>(限购5份)</i>
-                <p>剩余138份</p>
-                <view>
-                  <span>&yen 3.90</span>
-                  <span>&yen 5.90</span>
-                  <a href="">立即秒杀</a>
-                </view>
-              </view>
-              <view class="goodsList">
-                <img src="../../static/miaosha_03.jpg" alt="" />
-                <h4>【甜葡萄】 约250g/份</h4>
-                <i>(限购5份)</i>
-                <p>剩余138份</p>
-                <view>
-                  <span>&yen 3.90</span>
-                  <span>&yen 5.90</span>
-                  <a href="">立即秒杀</a>
-                </view>
-              </view>
-              <view class="goodsList">
-                <img src="../../static/miaosha_03.jpg" alt="" />
-                <h4>【甜葡萄】 约250g/份</h4>
-                <i>(限购5份)</i>
-                <p>剩余138份</p>
-                <view>
-                  <span>&yen 3.90</span>
-                  <span>&yen 5.90</span>
-                  <a href="">立即秒杀</a>
-                </view>
-              </view>
-              <view class="goodsList">
-                <img src="../../static/miaosha_03.jpg" alt="" />
-                <h4>【甜葡萄】 约250g/份</h4>
-                <i>(限购5份)</i>
-                <p>剩余138份</p>
-                <view>
-                  <span>&yen 3.90</span>
-                  <span>&yen 5.90</span>
-                  <a href="">立即秒杀</a>
-                </view>
-              </view>
-			  <view class="goodsList">
-			    <img src="../../static/miaosha_03.jpg" alt="" />
-			    <h4>【甜葡萄】 约250g/份</h4>
-			    <i>(限购5份)</i>
-			    <p>剩余138份</p>
-			    <view>
-			      <span>&yen 3.90</span>
-			      <span>&yen 5.90</span>
-			      <a href="">立即秒杀</a>
-			    </view>
-			  </view>
-            </view>
+				<unicloud-db
+					v-slot:default="{data}"
+					collection="opendb-mall-goods"
+				 >
+				 <view class="goodsList" v-for="(item, index) in data" :key="index">
+				   <img :src="item.goods_thumb" alt="" />
+				   <h4>{{ item.name }}</h4>
+				   <i>(限购5份)</i>
+				   <p>剩余{{ item.remain_count }}份</p>
+				   <view>
+				     <span>&yen {{ item.goods_price }}</span>
+				     <span>&yen {{ item.goods_newPrice }}</span>
+				     <a href="">立即秒杀</a>
+				   </view>
+				 </view>
+				 </unicloud-db>
+
           </view>
         </view>
       </view>
@@ -86,7 +45,15 @@
 </template>
 
 <script>
-	
+	// 获取db引用
+	const db = uniCloud.database()
+	db.collection('opendb-mall-goods')
+	.get().then((res)=>{
+		console.log(res);
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
     export default {
         data(){
             return{

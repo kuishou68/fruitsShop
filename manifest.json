@@ -67,5 +67,12 @@
     },
     "uniStatistics" : {
         "enable" : false
+    },
+    "h5" : {
+        "title" : "shuiguoshule",
+        "router" : {
+            "mode" : "history",
+            "base" : ""
+        }
     }
 }

@@ -15,7 +15,6 @@
 		</view>
 		<!--分类商品-->
 		<jobSelect ref="jobSelect" :listData="listData" @confirem="confiremJob"></jobSelect>
-		
 
 		<!--底部导航-->
 		<Footer></Footer>
@@ -79,30 +78,11 @@
 					goods_img_url:'../../static/首页-商品_10.png',
 					goods_newPrice: 12.8,
 					goods_price: 10.8
-				},{
-					goods_id: 2,
-					goods_name:'【脆李】约500g/份晶莹剔透，饱满汁多',
-					goods_img_url:'../../static/首页-商品_12.png',
-					goods_newPrice: 9.8,
-					goods_price: 18.8
-				},{
-					goods_id: 3,
-					goods_name:'【极品葡萄】约500g/份晶莹剔透，饱满汁多',
-					goods_img_url:'../../static/首页-商品_03.png',
-					goods_newPrice: 22.8,
-					goods_price: 19.8
-				},{
-					goods_id: 4,
-					goods_name:'【泰龙】约100g/份晶莹剔透，饱满汁多',
-					goods_img_url:'../../static/首页-商品_06.png',
-					goods_newPrice: 15.8,
-					goods_price: 13.8
 				}]
 			}
 		},
 		components: {
 			jobSelect,
-			// shopCarAnimation,
 			Footer
 		},
 		methods: {
