@@ -99,8 +99,7 @@
 		console.log(err.code);
 		console.log(err.message);
 	})
-	// 加入购物车动画组件
-	import shopCarAnimation from '@/components/add-shopcar-animation.vue'
+	// 加入购物车动画组件	import shopCarAnimation from '@/components/add-shopcar-animation.vue'
 	export default {
 		data() {
 			return {
