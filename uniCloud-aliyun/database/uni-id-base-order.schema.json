@@ -7,19 +7,23 @@
 		},
 		"title": {
 			"bsonType": "string",
-			"description": "商品标题"
+			"description": "商品标题",
+			"title": "商品标题"
 		},
 		"type": {
 			"bsonType": "string",
-			"description": "订单类型，如商品订单，会员订单，充值订单等"
+			"description": "订单类型，如商品订单，会员订单，充值订单等",
+			"title": "订单类型"
 		},
 		"pay_type": {
 			"bsonType": "string",
-			"description": "支付渠道，wxpay | alipay"
+			"description": "支付渠道，wxpay | alipay",
+			"title": "支付渠道"
 		},
 		"total_fee": {
-			"bsonType": "int",
-			"description": "订单总金额，单位：分。"
+			"bsonType": "double",
+			"description": "订单总金额，单位：分。",
+			"title": "订单总金额"
 		},
 		"user_id": {
 			"bsonType": "String",
@@ -31,53 +35,65 @@
 		},
 		"platform": {
 			"bsonType": "String",
-			"description": "下单平台类型：h5、mp-weixin、mp-alipay、app-plus等"
+			"description": "下单平台类型：h5、mp-weixin、mp-alipay、app-plus等",
+			"title": "下单平台类型"
 		},
 		"status": {
 			"bsonType": "int",
 			"minimum": -3,
 			"maximum": 5,
-			"description": "订单状态，1：待付款，2：已付款，3：退款审核中，4：退款中，5：已退款，-1已取消付款\/退款，-2：退款拒绝，-3：退款失败"
+			"description": "订单状态，1：待付款，2：已付款，3：退款审核中，4：退款中，5：已退款，-1已取消付款\/退款，-2：退款拒绝，-3：退款失败",
+			"title": "订单状态"
 		},
 		"is_refund": {
 			"bsonType": "bool",
-			"description": "是否是退款订单"
+			"description": "是否是退款订单",
+			"title": "是否是退款订单"
 		},
 		"refund_amount": {
 			"bsonType": "int",
-			"description": "退款金额（非退款订单表示已退款总金额，退款订单表示该笔退款的退款金额），单位：分"
+			"description": "退款金额（非退款订单表示已退款总金额，退款订单表示该笔退款的退款金额），单位：分",
+			"title": "退款金额"
 		},
 		"refund_count": {
 			"bsonType": "int",
-			"description": "总退款笔数（非退款订单有值）"
+			"description": "总退款笔数（非退款订单有值）",
+			"title": "总退款笔数"
 		},
 		"create_time": {
 			"bsonType": "timestamp",
-			"description": "订单创建时间\/发起退款时间"
+			"description": "订单创建时间\/发起退款时间",
+			"title": "订单创建时间"
 		},
 		"update_time": {
 			"bsonType": "timestamp",
-			"description": "订单更新时间"
+			"description": "订单更新时间",
+			"title": "订单更新时间"
 		},
 		"paid_time": {
 			"bsonType": "timestamp",
-			"description": "订单付款时间"
+			"description": "订单付款时间",
+			"title": "订单付款时间"
 		},
 		"refund_time": {
 			"bsonType": "timestamp",
-			"description": "订单完成退款时间"
+			"description": "订单完成退款时间",
+			"title": "订单完成退款时间"
 		},
 		"refund_desc": {
 			"bsonType": "String",
-			"description": "退款原因"
+			"description": "退款原因",
+			"title": "退款原因"
 		},
 		"transaction_id": {
 			"bsonType": "String",
-			"description": "微信或支付宝交易单号"
+			"description": "微信或支付宝交易单号",
+			"title": "微信或支付宝交易单号"
 		},
 		"info": {
 			"bsonType": "string",
-			"description": "自定义的订单拓展信息，如商品信息、会员卡种类信息等"
+			"description": "自定义的订单拓展信息，如商品信息、会员卡种类信息等",
+			"title": "自定义的订单拓展信息"
 		}
 	}
 }

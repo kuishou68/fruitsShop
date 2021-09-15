@@ -1,7 +1,15 @@
 {
 	"bsonType": "object",
-	"required": ["goods_sn", "name", "remain_count", "month_sell_count", "total_sell_count", "comment_count", "is_real",
-		"is_on_sale", "is_alone_sale", "is_best", "is_new", "is_hot"
+	"required": [
+		"goods_sn",
+		"name",
+		"remain_count",
+		"month_sell_count",
+		"total_sell_count",
+		"is_real",
+		"is_on_sale",
+		"goods_newPrice",
+		"goods_price"
 	],
 	"permission": {
 		"read": "doc.is_on_sale == true",
@@ -16,7 +24,8 @@
 		"category_id": {
 			"bsonType": "string",
 			"description": "分类 id，参考`opendb-mall-categories`表",
-			"foreignKey": "opendb-mall-categories._id"
+			"foreignKey": "opendb-mall-categories._id",
+			"title": "分类ID"
 		},
 		"goods_sn": {
 			"bsonType": "string",
@@ -46,20 +55,28 @@
 			"bsonType": "string",
 			"description": "商品缩略图，用于在列表或搜索结果中预览显示",
 			"title": "缩略图地址",
-			"pattern": "^(http:\/\/|https:\/\/|\/|.\/|@\/)\\S",
+			"pattern": "^(http://|https://|/|./|@/)\\S",
 			"trim": "both"
 		},
 		"goods_banner_imgs": {
 			"bsonType": "array",
-			"description": "商品详情页的banner图地址"
+			"description": "商品详情页的banner图地址",
+			"arrayType": "file",
+			"multiple": true, // 允许选择多张图片
+			"fileMediaType": "image", // 可选值 all|image|video 默认值为all,表示所有文件，image表示图片类型文件，video表示视频类型文件
+			"fileExtName": "jpg,png", // 扩展名过滤，多个用 , 分割
+			"maxLength": 3, // 限制最大数量
+			"title": "banner图地址"
 		},
 		"goods_newPrice": {
-			"bsonType": "int",
-			"description": "最新优惠价"
+			"bsonType": "double",
+			"description": "最新优惠价",
+			"title": "最新优惠价"
 		},
 		"goods_price": {
-			"bsonType": "int",
-			"description": "价格(优惠前)"
+			"bsonType": "double",
+			"description": "价格(优惠前)",
+			"title": "价格"
 		},
 		"remain_count": {
 			"bsonType": "int",
@@ -68,15 +85,18 @@
 		},
 		"month_sell_count": {
 			"bsonType": "int",
-			"description": "月销量"
+			"description": "月销量",
+			"title": "月销量"
 		},
 		"total_sell_count": {
 			"bsonType": "int",
-			"description": "总销量"
+			"description": "总销量",
+			"title": "总销量"
 		},
 		"comment_count": {
 			"bsonType": "int",
-			"description": "累计评论数"
+			"description": "累计评论数",
+			"title": "累计评论数"
 		},
 		"is_real": {
 			"bsonType": "bool",
@@ -90,11 +110,13 @@
 		},
 		"is_alone_sale": {
 			"bsonType": "bool",
-			"description": "是否能单独销售；如果不能单独销售，则只能作为某商品的配件或者赠品销售"
+			"description": "是否能单独销售；如果不能单独销售，则只能作为某商品的配件或者赠品销售",
+			"title": "是否单独销售"
 		},
 		"is_best": {
 			"bsonType": "bool",
-			"description": "是否精品"
+			"description": "是否精品",
+			"title": "是否精品"
 		},
 		"is_new": {
 			"bsonType": "bool",
@@ -103,29 +125,33 @@
 		},
 		"is_hot": {
 			"bsonType": "bool",
-			"description": "是否热销"
+			"description": "是否热销",
+			"title": "是否热销"
 		},
 		"add_date": {
 			"bsonType": "timestamp",
 			"description": "上架时间",
 			"defaultValue": {
 				"$env": "now"
-			}
+			},
+			"title": "上架时间"
 		},
 		"last_modify_date": {
 			"bsonType": "timestamp",
 			"description": "最后修改时间",
 			"defaultValue": {
 				"$env": "now"
-			}
+			},
+			"title": "最后修改时间"
 		},
 		"seller_note": {
 			"bsonType": "string",
-			"description": "商家备注，仅商家可见",
+			"description": "仅商家可见",
 			"trim": "both",
 			"permission": {
 				"read": false
-			}
+			},
+			"title": "商家备注"
 		}
 	}
 }
