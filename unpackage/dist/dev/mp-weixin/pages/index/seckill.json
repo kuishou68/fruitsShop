@@ -2,6 +2,8 @@
   "navigationBarTitleText": "限时秒杀",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-countdown": "/uni_modules/uni-countdown/components/uni-countdown/uni-countdown"
+    "seckill-unicloud-db-default": "/pages/index/seckill-unicloud-db-default",
+    "uni-countdown": "/uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "unicloud-db": "/node-modules/@dcloudio/uni-cli-shared/components/unicloud-db"
   }
 }

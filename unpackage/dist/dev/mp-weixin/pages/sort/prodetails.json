@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "商品详情",
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "prodetails-unicloud-db-default": "/pages/sort/prodetails-unicloud-db-default",
+    "prodetails-unicloud-db-default1": "/pages/sort/prodetails-unicloud-db-default1",
+    "unicloud-db": "/node-modules/@dcloudio/uni-cli-shared/components/unicloud-db"
+  }
 }
