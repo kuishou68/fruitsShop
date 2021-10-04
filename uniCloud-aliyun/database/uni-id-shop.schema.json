@@ -1,0 +1,65 @@
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"shop_id": {
+			"bsonType": "string",
+			"description": "门店id，参考uni-id-shop表",
+			"title": "门店ID"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "门店名称",
+			"title": "门店名称"
+		},
+		"type": {
+			"bsonType": "string",
+			"description": "门店类型 1:自营 2:加盟",
+			"trim": "both",
+			"title": "门店类型"
+		},
+		"address": {
+			"bsonType": "string",
+			"description": "门店位置",
+			"trim": "both",
+			"title": "门店位置"
+		},
+		"city": {
+			"bsonType": "string",
+			"description": "所在城市",
+			"title": "所在城市"
+		},
+		"geohash": {
+			"bsontype": "string",
+			"description": "经纬度",
+			"title": "经纬度"
+		},
+		"latitude": {
+			"basontype": "string",
+			"description": "纬度",
+			"title": "纬度"
+		},
+		"longitude": {
+			"basontype": "string",
+			"description": "经度",
+			"title": "经度"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			},
+			"title": "创建时间"
+		}
+	}
+}

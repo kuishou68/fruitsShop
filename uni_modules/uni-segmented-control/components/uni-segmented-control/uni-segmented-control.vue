@@ -1,11 +1,17 @@
 <template>
 	<view :class="[styleType === 'text'?'segmented-control--text' : 'segmented-control--button' ]" :style="{ borderColor: styleType === 'text' ? '' : activeColor }"
 	 class="segmented-control">
-		<view v-for="(item, index) in values" :class="[ styleType === 'text'?'segmented-control__item--text': 'segmented-control__item--button' , index === currentIndex&&styleType === 'button'?'segmented-control__item--button--active': '' , index === 0&&styleType === 'button'?'segmented-control__item--button--first': '',index === values.length - 1&&styleType === 'button'?'segmented-control__item--button--last': '' ]"
+	 <unicloud-db
+		v-slot:default="{data, loading, error, options}"
+		collection="uni-id-category-order"  
+		orderby="_id asc"
+		>
+		<view v-for="(item, index) in data" :class="[ styleType === 'text'?'segmented-control__item--text': 'segmented-control__item--button' , index === currentIndex&&styleType === 'button'?'segmented-control__item--button--active': '' , index === 0&&styleType === 'button'?'segmented-control__item--button--first': '',index === values.length - 1&&styleType === 'button'?'segmented-control__item--button--last': '' ]"
 		 :key="index" :style="{
         backgroundColor: index === currentIndex && styleType === 'button' ? activeColor : '',borderColor: index === currentIndex&&styleType === 'text'||styleType === 'button'?activeColor:'transparent'
       }"
 		 class="segmented-control__item" @click="_onClick(index)">
+
 			<text :style="{color:
           index === currentIndex
             ? styleType === 'text'
@@ -14,8 +20,9 @@
             : styleType === 'text'
               ? '#000'
               : activeColor}"
-			 class="segmented-control__text">{{ item }}</text>
+			 class="segmented-control__text">{{ item.name }}</text>
 		</view>
+		</unicloud-db>
 	</view>
 </template>
 
@@ -32,7 +39,14 @@
 	 * @property {Array} values 选项数组
 	 * @event {Function} clickItem 组件触发点击事件时触发，e={currentIndex}
 	 */
-
+	const db = uniCloud.database()
+	db.collection('uni-id-category-order')
+	.get().then((res)=>{
+		console.log(res);
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
 	export default {
 		name: 'UniSegmentedControl',
 		emits:['clickItem'],

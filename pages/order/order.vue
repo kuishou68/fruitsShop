@@ -7,24 +7,29 @@
 		</view> -->
 		<!-- 选项卡 -->
 		<uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="button" activeColor="#ff3861"></uni-segmented-control>
-        <view class="content">
+        <unicloud-db
+			v-slot:default="{data, loading, error, options}"
+			collection="uni-id-base-order"
+			orderby="_id asc"
+			>
+		<view class="content" v-for="(item, index) in data" :key="index">
 			<!-- 小程序 -->
-            <view v-show="current === 0">
+            <view v-show="current === 0" >
 				<!--订单1-->
-                <view class="goods">
+                <view class="goods" >
                 	<view class="g-top">
                 		<view class="top-left">
                 			<span class="iconfont iconshizhong"></span>
-                			<text>2020-09-04 20:41:11</text>
+                			<text>{{ item.create_time }}</text>
                 			<view class="order-img"><img src="../../static/order.png" alt=""></view>
                 		</view>
                 		<text class="top-right">已完成</text>
                 	</view>
-                	<view class="g-img"><img src="../../static/goods01.png" alt=""></view>
+                	<view class="g-img"><img :src="item.goods_thumb" alt=""></view>
                 	<view class="g-bottom">
                 		<view class="bottom-left">
-                			<view>共计3件商品</view>
-                			<view class="sum">合计：<text>￥25.40</text></view>
+                			<view>共计{{ item.count }}件商品</view>
+                			<view class="sum">合计：<text>￥{{item.total_fee}}</text></view>
                 		</view>
                 		<view class="bottom-right">
                 			<button type="submit" class="btn del" >删除订单</button>
@@ -312,8 +317,7 @@
 			</view>
 			
         </view>
-		
-		
+		</unicloud-db>
 		<!--底部栏-->
 		<Footer></Footer>
 	</view>
@@ -328,11 +332,19 @@
 	import zzxTabs from "@/components/zzx-tabs/zzx-tabs.vue"
 	// 底部栏
 	import Footer from '../../components/song-footer/song-footer.vue'
+	const db = uniCloud.database()
+	db.collection('uni-id-base-order')
+	.get().then((res)=>{
+		console.log(res);
+	}).catch((err)=>{
+		console.log(err.code);
+		console.log(err.message);
+	})
 	export default {
 		data() {
 			return {
 				current: 0,
-				items: ['小程序', '拼团', '预售', '门店'],
+				// items: ['小程序', '拼团', '预售', '门店'],
 			}
 		},
 		components: {
