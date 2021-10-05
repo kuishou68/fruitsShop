@@ -27,20 +27,28 @@
 			"title": "下单会员手机号",
 			"foreignKey": "uni-id-menberInfo.mobile"
 		},
-		"type": {
-			"bsonType": "string",
-			"description": "小程序订单，拼团订单，预售订单、门店订单",
-			"title": "订单类型"
-		},
-		"pay_type": {
-			"bsonType": "string",
-			"description": "微信 | 支付宝",
-			"title": "支付渠道"
-		},
 		"name": {
 			"bsonType": "string",
-			"description": "商品名称",
-			"title": "名称",
+			"description": "名称1",
+			"title": "商品名称1",
+			"trim": "both"
+		},
+		"name2": {
+			"bsonType": "string",
+			"description": "名称2",
+			"title": "商品名称2",
+			"trim": "both"
+		},
+		"name3": {
+			"bsonType": "string",
+			"description": "名称3",
+			"title": "商品名称3",
+			"trim": "both"
+		},
+		"name4": {
+			"bsonType": "string",
+			"description": "名称4",
+			"title": "商品名称4",
 			"trim": "both"
 		},
 		"count": {
@@ -50,26 +58,82 @@
 		},
 		"goods_thumb": {
 			"bsonType": "string",
-			"description": "商品缩略图，用于在列表或搜索结果中预览显示",
-			"title": "缩略图地址",
+			"description": "商品缩略图1，对应唯一的商品名称",
+			"title": "缩略图地址1",
 			"pattern": "^(http:\/\/|https:\/\/|\/|.\/|@\/)\\S",
 			"trim": "both"
+		},
+		"goods_thumb2": {
+			"bsonType": "string",
+			"description": "商品缩略图2，对应唯一的商品名称",
+			"title": "缩略图地址2",
+			"pattern": "^(http:\/\/|https:\/\/|\/|.\/|@\/)\\S",
+			"trim": "both"
+		},
+		"goods_thumb3": {
+			"bsonType": "string",
+			"description": "商品缩略图3，对应唯一的商品名称",
+			"title": "缩略图地址3",
+			"pattern": "^(http:\/\/|https:\/\/|\/|.\/|@\/)\\S",
+			"trim": "both"
+		},
+		"goods_thumb4": {
+			"bsonType": "string",
+			"description": "商品缩略图4，对应唯一的商品名称",
+			"title": "缩略图地址4",
+			"pattern": "^(http:\/\/|https:\/\/|\/|.\/|@\/)\\S",
+			"trim": "both"
+		},
+		"type": {
+			"bsonType": "string",
+			"description": "小程序订单，拼团订单，预售订单、门店订单",
+			"title": "订单类型"
+		},
+		"shop_name": {
+			"bsonType": "string",
+			"description": "在那个门店下的单",
+			"title": "服务门店"
+		},
+		"distribution_Mode": {
+			"bsonType": "string",
+			"description": "门店自提 | 送货上门(满39元3公里免运费)",
+			"title": "配送方式"
+		},
+		"pay_type": {
+			"bsonType": "string",
+			"description": "微信零钱 | 会员卡 | 支付宝",
+			"title": "支付方式"
+		},
+		"commodity_fee": {
+			"bsonType": "double",
+			"description": "商品总额",
+			"title": "商品总额"
+		},
+		"coupon_fee": {
+			"bsonType": "double",
+			"description": "优惠金额",
+			"title": "优惠金额"
+		},
+		"refund_fee": {
+			"bsonType": "double",
+			"description": "退款金额",
+			"title": "退款金额"
 		},
 		"total_fee": {
 			"bsonType": "double",
 			"description": "单位：分",
 			"title": "订单总金额"
 		},
-		"platform": {
-			"bsonType": "string",
-			"description": "如 微信 | 支付宝 | APP ",
-			"title": "下单平台类型"
+		"comment": {
+			"dsonType": "string",
+			"description": "是否需要切盒，叉子、手套等",
+			"title": "备注"
 		},
 		"status": {
 			"bsonType": "int",
 			"minimum": -3,
 			"maximum": 5,
-			"description": "1：待付款，2：已付款，3：退款审核中，4：退款中，5：已退款，-1已取消付款\/退款，-2：退款拒绝，-3：退款失败",
+			"description": "1：待付款，2：待提货，3：已完成，4：退款中，5：已退款，-1已取消付款\/退款，-2：退款拒绝，-3：退款失败",
 			"title": "订单状态"
 		},
 		"create_time": {

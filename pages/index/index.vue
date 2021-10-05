@@ -137,7 +137,7 @@
 							<unicloud-db
 								v-slot:default="{data, loading, error, options}" 
 								collection="opendb-mall-goods"  
-								orderby="category_id asc"
+								orderby="_id asc"
 								>
 								<view v-if="error">{{ error.message }}</view>
 								<view class="index-commodity-detail" v-for="(item, index) in data" :key="index">

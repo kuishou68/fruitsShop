@@ -20,15 +20,20 @@
                 	<view class="g-top">
                 		<view class="top-left">
                 			<span class="iconfont iconshizhong"></span>
-                			<text>{{ item.create_time }}</text>
+                			<text>{{ item.create_time | formatData}}</text>
                 			<view class="order-img"><img src="../../static/order.png" alt=""></view>
                 		</view>
                 		<text class="top-right">已完成</text>
                 	</view>
-                	<view class="g-img"><img :src="item.goods_thumb" alt=""></view>
+                	<view class="g-img">
+						<img :src="item.goods_thumb" alt="">
+						<img :src="item.goods_thumb2" alt="" v-show="true" style="display: none;">
+						<img :src="item.goods_thumb3" alt="" v-show="true">
+						<img :src="item.goods_thumb4" alt="" v-show="true">
+					</view>
                 	<view class="g-bottom">
                 		<view class="bottom-left">
-                			<view>共计{{ item.count }}件商品</view>
+                			<view>共计 {{ item.count }} 件商品</view>
                 			<view class="sum">合计：<text>￥{{item.total_fee}}</text></view>
                 		</view>
                 		<view class="bottom-right">
@@ -37,84 +42,8 @@
                 		</view>
                 	</view>
                 </view>
-                <!--订单2-->
-                <view class="goods">
-                	<view class="g-top">
-                		<view class="top-left">
-                			<span class="iconfont iconshizhong"></span>
-                			<text>2020-09-04 20:41:11</text>
-                			<view class="order-img"><img src="../../static/order.png" alt=""></view>
-                		</view>
-                		<text class="top-right">已完成</text>
-                	</view>
-                	<view class="g-img">
-						<img src="../../static/goods02.png" alt="">
-						<img src="../../static/goods01.png" alt="">
-					</view>
-                	<view class="g-bottom">
-                		<view class="bottom-left">
-                			<view>共计3件商品</view>
-                			<view class="sum">合计：<text>￥25.40</text></view>
-                		</view>
-                		<view class="bottom-right">
-                			<button class="btn del">删除订单</button>
-                			<button class="btn res">再来一单</button>
-                		</view>
-                	</view>
-                </view>
-                
-                <!-- 订单3 -->
-                <view class="goods">
-                	<view class="g-top">
-                		<view class="top-left">
-                			<span class="iconfont iconshizhong"></span>
-                			<text>2020-09-04 20:41:11</text>
-                			<view class="order-img"><img src="../../static/order.png" alt=""></view>
-                		</view>
-                		<text class="top-right">已完成</text>
-                	</view>
-                	<view class="g-img">
-						<img src="../../static/goods01.png" alt="">
-						<img src="../../static/限时秒杀_09.png" alt="">
-					</view>
-                	<view class="g-bottom">
-                		<view class="bottom-left">
-                			<view>共计3件商品</view>
-                			<view class="sum">合计：<text>￥25.40</text></view>
-                		</view>
-                		<view class="bottom-right">
-                			<button class="btn del">删除订单</button>
-                			<button class="btn res">再来一单</button>
-                		</view>
-                	</view>
-                </view>
-				
-				<!-- 订单4 -->
-				<view class="goods">
-					<view class="g-top">
-						<view class="top-left">
-							<span class="iconfont iconshizhong"></span>
-							<text>2020-09-04 20:41:11</text>
-							<view class="order-img"><img src="../../static/order.png" alt=""></view>
-						</view>
-						<text class="top-right">已完成</text>
-					</view>
-					<view class="g-img">
-						<img src="../../static/goods01.png" alt="">
-						<img src="../../static/限时秒杀_09.png" alt="">
-					</view>
-					<view class="g-bottom">
-						<view class="bottom-left">
-							<view>共计3件商品</view>
-							<view class="sum">合计：<text>￥25.40</text></view>
-						</view>
-						<view class="bottom-right">
-							<view class="btn del">删除订单</view>
-							<button class="btn res">再来一单</button>
-						</view>
-					</view>
-				</view>
-            </view>
+              
+			</view>
 			
             <!--拼团-->
 			<view v-show="current === 1">
@@ -351,6 +280,7 @@
 			zzxTabs,
 			Footer
 		},
+		
 		methods: {
 		  onClickItem(e) {
             if (this.current !== e.currentIndex) {
@@ -363,6 +293,27 @@
           removeMydot() {
               this.$refs.mytabs.removeDot(0);
           }
+		},
+		// 服务器端时间戳格式化处理
+		filters:{
+			formatData:function(timer){
+				var arrTimestamp = (timer + '').split('');
+				for (var start = 0; start < 13; start++) {
+					if (!arrTimestamp[start]) {
+						arrTimestamp[start] = '0';
+					}
+				}
+				var Etime = arrTimestamp.join('') * 1; //参数时间
+				var Etimer = new Date(Etime)
+				
+				var Eyear = Etimer.getFullYear(); //取得4位数的年份
+				var Emonth = Etimer.getMonth() + 1 < 10 ? '0' + (Etimer.getMonth() + 1) : Etimer.getMonth() + 1; //取得日期中的月份，其中0表示1月，11表示12月
+				var Edate = Etimer.getDate()< 10 ? '0' + Etimer.getDate() : Etimer.getDate(); //返回日期月份中的天数（1到31）
+				var Ehour = Etimer.getHours() < 10 ? '0' + Etimer.getHours() : Etimer.getHours(); //返回日期中的小时数（0到23）
+				var Eminute = Etimer.getMinutes() < 10 ? '0' + Etimer.getMinutes() : Etimer.getMinutes(); //返回日期中的分钟数（0到59）
+				
+				return Eyear + "-" + Emonth + "-" + Edate + " " + Ehour + ":" + Eminute
+			}
 		}
 	}
 	

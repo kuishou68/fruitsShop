@@ -16,24 +16,24 @@
 			"description": "门店id，参考uni-id-shop表",
 			"title": "门店ID"
 		},
-		"name": {
+		"shop_name": {
 			"bsonType": "string",
 			"description": "门店名称",
 			"title": "门店名称"
 		},
-		"type": {
+		"shop_type": {
 			"bsonType": "string",
 			"description": "门店类型 1:自营 2:加盟",
 			"trim": "both",
 			"title": "门店类型"
 		},
-		"address": {
+		"shop_address": {
 			"bsonType": "string",
 			"description": "门店位置",
 			"trim": "both",
 			"title": "门店位置"
 		},
-		"city": {
+		"shop_city": {
 			"bsonType": "string",
 			"description": "所在城市",
 			"title": "所在城市"
