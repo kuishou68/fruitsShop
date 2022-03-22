@@ -3,11 +3,11 @@
 		<view class="content">
 			<view class="nav">
 				<view class="nav-top">
-					<text class="nav-l">
+					<view class="nav-l">
 						<!-- <text class="iconfont iconchakantiezizhaopian"></text> -->
 						<image class="user-logo" src="../../static/kuishou.jpg" />
 						<text class="name">魁首</text>
-					</text>
+					</view>
 					<view class="nav-r">
 						<text class="iconfont iconHUNhunguozhihuiyuanxitongxiaotubiao-huiyuanma"></text>
 						<text class="namema">会员名</text>

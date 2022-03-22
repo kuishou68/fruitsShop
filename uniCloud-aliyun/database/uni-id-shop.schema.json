@@ -38,17 +38,17 @@
 			"description": "所在城市",
 			"title": "所在城市"
 		},
-		"geohash": {
+		"shop_geohash": {
 			"bsontype": "string",
 			"description": "经纬度",
 			"title": "经纬度"
 		},
-		"latitude": {
+		"shop_latitude": {
 			"basontype": "string",
 			"description": "纬度",
 			"title": "纬度"
 		},
-		"longitude": {
+		"shop_longitude": {
 			"basontype": "string",
 			"description": "经度",
 			"title": "经度"

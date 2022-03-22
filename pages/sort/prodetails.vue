@@ -4,7 +4,7 @@
 	 <unicloud-db
 	  v-slot:default="{data, error}"
 	  collection="opendb-mall-goods"  
-	  where="_id=='6138af0feb2f8b000153307c'"
+	  orderby="_id asc"
 	  >
 		<view v-if="error">{{ error.message }}</view>
        <view class="pro" v-for="(item, index) in data" :key="index">
